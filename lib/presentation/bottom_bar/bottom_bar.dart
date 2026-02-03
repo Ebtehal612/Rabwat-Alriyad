@@ -36,7 +36,7 @@ class BottomBar extends StatelessWidget {
           labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
           labelTextStyle: MaterialStateProperty.all(
             TextStyle(
-              fontSize: 11, // تصغير الخط يقرب العناصر بصريًا
+              fontSize: 11,
             ),
           ),
           destinations: [
@@ -45,29 +45,10 @@ class BottomBar extends StatelessWidget {
               selectedIcon: Icon(Icons.home, color: Palette.green.shade700),
               label: AppLocalizations.of(context)!.home,
             ),
-            NavigationDestination(
-              icon: const Icon(Icons.assignment_outlined),
-              selectedIcon:
-                  Icon(Icons.assignment, color: Palette.green.shade700),
-              label: AppLocalizations.of(context)!.permits,
-            ),
-            NavigationDestination(
-              icon: const Icon(Icons.people_outlined),
-              selectedIcon: Icon(Icons.people, color: Palette.green.shade700),
-              label: AppLocalizations.of(context)!.community,
-            ),
-            NavigationDestination(
-              icon: const Icon(Icons.room_service_outlined),
-              selectedIcon:
-                  Icon(Icons.room_service, color: Palette.green.shade700),
-              label: AppLocalizations.of(context)!.services,
-            ),
-            NavigationDestination(
-              icon: const Icon(Icons.more_horiz),
-              selectedIcon:
-                  Icon(Icons.more_horiz, color: Palette.green.shade700),
-              label: AppLocalizations.of(context)!.more,
-            ),
+
+
+
+  
           ],
         ),
       ),
