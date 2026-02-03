@@ -34,21 +34,12 @@ class BottomBar extends StatelessWidget {
             );
           },
           labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-          labelTextStyle: MaterialStateProperty.all(
-            TextStyle(
-              fontSize: 11,
-            ),
-          ),
           destinations: [
             NavigationDestination(
               icon: const Icon(Icons.home_outlined),
               selectedIcon: Icon(Icons.home, color: Palette.green.shade700),
               label: AppLocalizations.of(context)!.home,
             ),
-
-
-
-  
           ],
         ),
       ),
