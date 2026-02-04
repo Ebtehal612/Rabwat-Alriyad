@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ritaj_compound/core/shared_preferences/prefs_keys.dart';
-import 'package:ritaj_compound/core/shared_preferences/shared_prefs.dart';
-import 'package:ritaj_compound/presentation/bottom_bar/bottom_bar.dart';
-import 'package:ritaj_compound/presentation/home_page/home_page_screen.dart';
-import 'package:ritaj_compound/presentation/splash/splash_screen.dart';
+import 'package:rabwat_alriyad/core/shared_preferences/prefs_keys.dart';
+import 'package:rabwat_alriyad/core/shared_preferences/shared_prefs.dart';
+import 'package:rabwat_alriyad/presentation/bottom_bar/bottom_bar.dart';
+import 'package:rabwat_alriyad/presentation/home_page/pages/home_page_screen.dart';
+import 'package:rabwat_alriyad/presentation/products/products_screen.dart';
+import 'package:rabwat_alriyad/presentation/splash/splash_screen.dart';
 import '../di/injection_container.dart';
 
 class AppRouter {
@@ -47,6 +48,16 @@ class AppRouter {
                 path: HomePageScreen.routeName,
                 pageBuilder: (context, state) =>
                     const NoTransitionPage(child: HomePageScreen()),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                name: ProductsScreen.routeName,
+                path: ProductsScreen.routeName,
+                pageBuilder: (context, state) =>
+                    const NoTransitionPage(child: ProductsScreen()),
               ),
             ],
           ),

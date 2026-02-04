@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ritaj_compound/app/app.dart';
-import 'package:ritaj_compound/app/di/injection_container.dart' as di;
+import 'package:rabwat_alriyad/app/app.dart';
+import 'package:rabwat_alriyad/app/di/injection_container.dart' as di;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   try {
     //await dotenv.load(fileName: ".env");
     await di.init();

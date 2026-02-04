@@ -98,12 +98,6 @@ abstract class AppLocalizations {
     Locale('en')
   ];
 
-  /// No description provided for @appTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Ritaj Compound'**
-  String get appTitle;
-
   /// No description provided for @choose.
   ///
   /// In en, this message translates to:
@@ -361,6 +355,156 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Home Page'**
   String get home;
+
+  /// No description provided for @livestockTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Best Quality Livestock with Highest Standards'**
+  String get livestockTitle;
+
+  /// No description provided for @livestockSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'We provide you with the finest livestock from quality and health sources'**
+  String get livestockSubtitle;
+
+  /// No description provided for @viewAllLivestock.
+  ///
+  /// In en, this message translates to:
+  /// **'Browse Livestock Now'**
+  String get viewAllLivestock;
+
+  /// No description provided for @availableNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Available Now'**
+  String get availableNow;
+
+  /// No description provided for @employees.
+  ///
+  /// In en, this message translates to:
+  /// **'Employees'**
+  String get employees;
+
+  /// No description provided for @qualityGuarantee.
+  ///
+  /// In en, this message translates to:
+  /// **'Quality Guarantee'**
+  String get qualityGuarantee;
+
+  /// No description provided for @hoursService.
+  ///
+  /// In en, this message translates to:
+  /// **'24/7 Service'**
+  String get hoursService;
+
+  /// No description provided for @livestockByType.
+  ///
+  /// In en, this message translates to:
+  /// **'Classification by Type'**
+  String get livestockByType;
+
+  /// No description provided for @viewAll.
+  ///
+  /// In en, this message translates to:
+  /// **'View All'**
+  String get viewAll;
+
+  /// No description provided for @naeemi.
+  ///
+  /// In en, this message translates to:
+  /// **'Naeemi'**
+  String get naeemi;
+
+  /// No description provided for @najdi.
+  ///
+  /// In en, this message translates to:
+  /// **'Najdi'**
+  String get najdi;
+
+  /// No description provided for @harri.
+  ///
+  /// In en, this message translates to:
+  /// **'Harri'**
+  String get harri;
+
+  /// No description provided for @tyus.
+  ///
+  /// In en, this message translates to:
+  /// **'Tyus'**
+  String get tyus;
+
+  /// No description provided for @featuredLivestock.
+  ///
+  /// In en, this message translates to:
+  /// **'Featured Livestock'**
+  String get featuredLivestock;
+
+  /// No description provided for @specialOffers.
+  ///
+  /// In en, this message translates to:
+  /// **'Special Livestock Offers'**
+  String get specialOffers;
+
+  /// No description provided for @workInProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Local Work'**
+  String get workInProgress;
+
+  /// No description provided for @years.
+  ///
+  /// In en, this message translates to:
+  /// **'Years'**
+  String get years;
+
+  /// No description provided for @months.
+  ///
+  /// In en, this message translates to:
+  /// **'Months'**
+  String get months;
+
+  /// No description provided for @saudiRiyal.
+  ///
+  /// In en, this message translates to:
+  /// **'Saudi Riyal'**
+  String get saudiRiyal;
+
+  /// No description provided for @contactNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact Now'**
+  String get contactNow;
+
+  /// No description provided for @sar.
+  ///
+  /// In en, this message translates to:
+  /// **'SAR'**
+  String get sar;
+
+  /// No description provided for @profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// No description provided for @products.
+  ///
+  /// In en, this message translates to:
+  /// **'Products'**
+  String get products;
+
+  /// No description provided for @rabwatalriyad.
+  ///
+  /// In en, this message translates to:
+  /// **'ربوة الرياض'**
+  String get rabwatalriyad;
+
+  /// No description provided for @thebestinKingdom.
+  ///
+  /// In en, this message translates to:
+  /// **'The best in Kingdom'**
+  String get thebestinKingdom;
 }
 
 class _AppLocalizationsDelegate

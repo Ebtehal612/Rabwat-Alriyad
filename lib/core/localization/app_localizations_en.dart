@@ -9,9 +9,6 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appTitle => 'Ritaj Compound';
-
-  @override
   String choose(String item) {
     return 'Choose $item';
   }
@@ -191,4 +188,80 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get home => 'Home Page';
+
+  @override
+  String get livestockTitle => 'Best Quality Livestock with Highest Standards';
+
+  @override
+  String get livestockSubtitle =>
+      'We provide you with the finest livestock from quality and health sources';
+
+  @override
+  String get viewAllLivestock => 'Browse Livestock Now';
+
+  @override
+  String get availableNow => 'Available Now';
+
+  @override
+  String get employees => 'Employees';
+
+  @override
+  String get qualityGuarantee => 'Quality Guarantee';
+
+  @override
+  String get hoursService => '24/7 Service';
+
+  @override
+  String get livestockByType => 'Classification by Type';
+
+  @override
+  String get viewAll => 'View All';
+
+  @override
+  String get naeemi => 'Naeemi';
+
+  @override
+  String get najdi => 'Najdi';
+
+  @override
+  String get harri => 'Harri';
+
+  @override
+  String get tyus => 'Tyus';
+
+  @override
+  String get featuredLivestock => 'Featured Livestock';
+
+  @override
+  String get specialOffers => 'Special Livestock Offers';
+
+  @override
+  String get workInProgress => 'Local Work';
+
+  @override
+  String get years => 'Years';
+
+  @override
+  String get months => 'Months';
+
+  @override
+  String get saudiRiyal => 'Saudi Riyal';
+
+  @override
+  String get contactNow => 'Contact Now';
+
+  @override
+  String get sar => 'SAR';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get products => 'Products';
+
+  @override
+  String get rabwatalriyad => 'ربوة الرياض';
+
+  @override
+  String get thebestinKingdom => 'The best in Kingdom';
 }

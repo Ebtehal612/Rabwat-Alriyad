@@ -1,13 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:rabwat_alriyad/presentation/home_page/pages/home_page_screen.dart';
 
-class SplashScreen extends StatelessWidget { 
-  static const String routeName = '/splash';      
-  const SplashScreen({Key? key}) : super(key: key);
+import '../../core/theme/palette.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+  static const routeName = '/splash-screen';
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Navigate to login after 3 seconds
+    Future.delayed(const Duration(seconds: 3), () {
+      if (mounted) {
+        context.goNamed(HomePageScreen.routeName);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
-        child:Text("Hi",style: TextStyle(fontSize: 20),),
+        child: CircularProgressIndicator(color: Palette.red.shade700,),
       ),
     );
   }

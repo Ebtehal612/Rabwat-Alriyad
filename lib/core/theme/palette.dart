@@ -370,9 +370,9 @@ class _DayBreakBlueColors {
     this.color4 = const Color(0xff69c0ff),
     this.color5 = const Color(0xff40a9ff),
     this.color6 = const Color(0xff1890ff),
-    this.color7 = const Color(0xff096dd9),
+    this.color7 = const Color(0xff1A3A52),
     this.color8 = const Color(0xff0050b3),
-    this.color9 = const Color(0xff003a8c),
+    this.color9 = const Color(0xff335267),
     this.color10 = const Color(0xff002766),
   });
 }

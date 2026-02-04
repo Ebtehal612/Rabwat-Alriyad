@@ -9,9 +9,6 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appTitle => 'Ritaj Compound';
-
-  @override
   String choose(String item) {
     return 'اختر $item';
   }
@@ -191,4 +188,80 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get home => 'الرئيسية';
+
+  @override
+  String get livestockTitle => 'أجود أنواع الذبائح بأعلى جودة';
+
+  @override
+  String get livestockSubtitle =>
+      'نوفر لك أجود أنواع الذبائح من مصادر الجودة والصحة';
+
+  @override
+  String get viewAllLivestock => 'تصفح الذبائح الآن';
+
+  @override
+  String get availableNow => 'متوفر الآن';
+
+  @override
+  String get employees => 'موظفين';
+
+  @override
+  String get qualityGuarantee => 'ضمان الجودة';
+
+  @override
+  String get hoursService => 'خدمة على مدار الساعة';
+
+  @override
+  String get livestockByType => 'تصنيف حسب النوع';
+
+  @override
+  String get viewAll => 'عرض الكل';
+
+  @override
+  String get naeemi => 'خروف';
+
+  @override
+  String get najdi => 'نجدي';
+
+  @override
+  String get harri => 'حري';
+
+  @override
+  String get tyus => 'تيوس';
+
+  @override
+  String get featuredLivestock => 'الماشية المميزة';
+
+  @override
+  String get specialOffers => 'عروض مميزة من الماشية';
+
+  @override
+  String get workInProgress => 'عمل بلدي';
+
+  @override
+  String get years => 'سنة';
+
+  @override
+  String get months => 'شهر';
+
+  @override
+  String get saudiRiyal => 'ريال سعودي';
+
+  @override
+  String get contactNow => 'تواصل الآن';
+
+  @override
+  String get sar => 'ر.س';
+
+  @override
+  String get profile => 'الملف الشخصي';
+
+  @override
+  String get products => 'المنتجات';
+
+  @override
+  String get rabwatalriyad => 'ربوة الرياض';
+
+  @override
+  String get thebestinKingdom => 'الأفضل في المملكة';
 }

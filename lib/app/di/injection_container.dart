@@ -1,11 +1,12 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
-import 'package:ritaj_compound/app/route_manager/app_router.dart';
-import 'package:ritaj_compound/core/cubits/user_cubit.dart';
-import 'package:ritaj_compound/core/localization/localization_manager.dart';
-import 'package:ritaj_compound/core/network/network_setup.dart';
-import 'package:ritaj_compound/core/shared_preferences/shared_prefs.dart';
-import 'package:ritaj_compound/core/theme/app_theme.dart';
+import 'package:rabwat_alriyad/app/route_manager/app_router.dart';
+import 'package:rabwat_alriyad/core/cubits/user_cubit.dart';
+import 'package:rabwat_alriyad/core/localization/localization_manager.dart';
+import 'package:rabwat_alriyad/core/localization/language_manager.dart';
+import 'package:rabwat_alriyad/core/network/network_setup.dart';
+import 'package:rabwat_alriyad/core/shared_preferences/shared_prefs.dart';
+import 'package:rabwat_alriyad/core/theme/app_theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final sl = GetIt.instance;
@@ -22,6 +23,7 @@ Future<void> init() async {
   sl.registerLazySingleton<AppTheme>(() => AppTheme());
   sl.registerLazySingleton(() => AppRouter());
   sl.registerLazySingleton<LocaleCubit>(() => LocaleCubit());
+  sl.registerLazySingleton<LanguageManager>(() => LanguageManager());
 
   // Data Sources
   //sl.registerLazySingleton<ProfileRemoteDataSource>(

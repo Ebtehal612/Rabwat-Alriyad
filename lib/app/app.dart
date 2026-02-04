@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 import 'package:toastification/toastification.dart';
 import '../core/localization/app_localizations.dart';
 import '../core/localization/localization_manager.dart';
+import '../core/localization/language_manager.dart';
 import '../core/theme/app_theme.dart';
 import '../core/cubits/user_cubit.dart';
 import 'di/injection_container.dart';
@@ -19,29 +21,34 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
+    return MultiProvider(
       providers: [
         BlocProvider.value(value: sl<LocaleCubit>()),
         BlocProvider.value(value: sl<UserCubit>()),
+        ChangeNotifierProvider.value(value: sl<LanguageManager>()),
       ],
-      child: BlocBuilder<LocaleCubit, Locale>(
-        builder: (context, state) {
-          return ScreenUtilInit(
-            minTextAdapt: true,
-            splitScreenMode: true,
-            designSize: const Size(393, 852),
-            builder: (context, child) => ToastificationWrapper(
-              child: MaterialApp.router(
-                key: ValueKey<String>(state.languageCode),
-                debugShowCheckedModeBanner: false,
-                title: 'Rabwat Alriyad',
-                theme: sl<AppTheme>().theme,
-                routerConfig: sl<AppRouter>().router,
-                locale: state,
-                localizationsDelegates: AppLocalizations.localizationsDelegates,
-                supportedLocales: AppLocalizations.supportedLocales,
-              ),
-            ),
+      child: Consumer<LanguageManager>(
+        builder: (context, languageManager, child) {
+          return BlocBuilder<LocaleCubit, Locale>(
+            builder: (context, state) {
+              return ScreenUtilInit(
+                minTextAdapt: true,
+                splitScreenMode: true,
+                designSize: const Size(393, 852),
+                builder: (context, child) => ToastificationWrapper(
+                  child: MaterialApp.router(
+                    key: ValueKey<String>(languageManager.currentLocale.languageCode),
+                    debugShowCheckedModeBanner: false,
+                    title: 'Rabwat Alriyad',
+                    theme: sl<AppTheme>().theme,
+                    routerConfig: sl<AppRouter>().router,
+                    locale: languageManager.currentLocale,
+                    localizationsDelegates: AppLocalizations.localizationsDelegates,
+                    supportedLocales: AppLocalizations.supportedLocales,
+                  ),
+                ),
+              );
+            },
           );
         },
       ),

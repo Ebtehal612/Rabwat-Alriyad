@@ -1,5 +1,5 @@
 {
-  "appTitle": "Ritaj Compound",
+
   "choose": "Choose {item}",
   "mustEnter": "You must enter {item}",
   "comparingPhoto": "Comparing Photo",
@@ -98,5 +98,30 @@
   "weekAgo":"Week ago",
   "weeksAgo":"Weeks ago",
   "today":"Today",
-  "home":"Home Page"
+  "home":"Home Page",
+  "livestockTitle": "Best Quality Livestock with Highest Standards",
+  "livestockSubtitle": "We provide you with the finest livestock from quality and health sources",
+  "viewAllLivestock": "Browse Livestock Now",
+  "availableNow": "Available Now",
+  "employees": "Employees",
+  "qualityGuarantee": "Quality Guarantee",
+  "hoursService": "24/7 Service",
+  "livestockByType": "Classification by Type",
+  "viewAll": "View All",
+  "naeemi": "Naeemi",
+  "najdi": "Najdi",
+  "harri": "Harri",
+  "tyus": "Tyus",
+  "featuredLivestock": "Featured Livestock",
+  "specialOffers": "Special Livestock Offers",
+  "workInProgress": "Local Work",
+  "years": "Years",
+  "months": "Months",
+  "saudiRiyal": "Saudi Riyal",
+  "contactNow": "Contact Now",
+  "sar": "SAR",
+  "profile": "Profile",
+  "products":"Products",
+  "rabwatalriyad":"ربوة الرياض",
+  "thebestinKingdom":"The best in Kingdom"
 }
