@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:rabwat_alriyad/core/assets/assets.gen.dart';
 import 'package:rabwat_alriyad/core/localization/app_localizations.dart';
 import 'package:rabwat_alriyad/core/localization/language_manager.dart';
 import 'package:rabwat_alriyad/core/theme/palette.dart';
 import 'package:rabwat_alriyad/core/widgets/text/custom_text.dart';
 import 'package:rabwat_alriyad/app/di/injection_container.dart';
-
 import '../../../core/widgets/app_bars/custom_app_bar.dart';
+import '../widgets/why_choose_us_section.dart';
+import '../widgets/special_offer_section.dart';
 
 class HomePageScreen extends StatefulWidget {
   static const String routeName = '/home';
@@ -49,10 +51,13 @@ class _HomePageScreenState extends State<HomePageScreen> {
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              CustomText.s18( AppLocalizations.of(context)!.rabwatalriyad,
+                              CustomText.s18(
+                                  AppLocalizations.of(context)!.rabwatalriyad,
                                   color: Palette.dayBreakBlue.color7),
                               4.verticalSpace,
-                              CustomText.s12( AppLocalizations.of(context)!.thebestinKingdom,
+                              CustomText.s12(
+                                  AppLocalizations.of(context)!
+                                      .thebestinKingdom,
                                   color: Palette.neutral.color7),
                             ],
                           ),
@@ -85,6 +90,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   _buildStatsSection(context),
                   _buildLivestockByTypeSection(context),
                   _buildFeaturedLivestockSection(context),
+                  const WhyChooseUsSection(),
+                  const SpecialOfferSection(),
                   20.verticalSpace,
                 ],
               ),
@@ -95,9 +102,10 @@ class _HomePageScreenState extends State<HomePageScreen> {
     );
   }
 
-  Widget _buildHeroSection(BuildContext context, LanguageManager languageManager) {
+  Widget _buildHeroSection(
+      BuildContext context, LanguageManager languageManager) {
     return Container(
-      height: 200.h,
+      height: 300.h,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
@@ -112,8 +120,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
         children: [
           // Background image
           Positioned.fill(
-            child: Image.asset(
-              'assets/images/home.jpg',
+            child: Assets.images.home.image(
               fit: BoxFit.cover,
               color: Colors.black.withOpacity(0.3),
               colorBlendMode: BlendMode.darken,
@@ -133,6 +140,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
               },
             ),
           ),
+
           // Content
           Positioned(
             bottom: 20.h,
@@ -141,6 +149,19 @@ class _HomePageScreenState extends State<HomePageScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: Palette.dayBreakBlue.color7,
+                      borderRadius: BorderRadius.circular(20.r),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10.0, vertical: 4.0),
+                      child: CustomText.s14(
+                          AppLocalizations.of(context)!.morethanXanimalsavailable,
+                        color: Colors.white,
+                      ),
+                    )),
                 CustomText.s24(
                   AppLocalizations.of(context)!.livestockTitle,
                   color: Colors.white,
@@ -152,31 +173,35 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   color: Colors.white.withOpacity(0.9),
                 ),
                 16.verticalSpace,
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    foregroundColor: Palette.dayBreakBlue.color7,
-                    padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.r),
+                Center(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(250.w, 50.h),
+                      backgroundColor: Palette.dayBreakBlue.color7,
+                      foregroundColor: Colors.white,
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 24.w, vertical: 12.h),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40.r),
+                      ),
                     ),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      CustomText.s14(
-                        AppLocalizations.of(context)!.viewAllLivestock,
-                        bold: true,
-                      ),
-                      8.horizontalSpace,
-                      Icon(
-                        languageManager.isArabic 
-                            ? Icons.arrow_back_ios 
-                            : Icons.arrow_forward_ios,
-                        size: 16.sp,
-                      ),
-                    ],
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        CustomText.s14(
+                          AppLocalizations.of(context)!.viewAllLivestock,
+                          bold: true,
+                        ),
+                        8.horizontalSpace,
+                        Icon(
+                          languageManager.isArabic
+                              ? Icons.arrow_forward_ios
+                              : Icons.arrow_forward_ios,
+                          size: 16.sp,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -196,7 +221,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
             child: _buildStatCard(
               context,
               '24/7',
-              AppLocalizations.of(context)!.hoursService,
+              AppLocalizations.of(context)!.continuoussupport,
               Icons.access_time,
             ),
           ),
@@ -205,7 +230,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
             child: _buildStatCard(
               context,
               '8500+',
-              AppLocalizations.of(context)!.employees,
+              AppLocalizations.of(context)!.satisfiedcustomer,
               Icons.people,
             ),
           ),
@@ -223,7 +248,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
     );
   }
 
-  Widget _buildStatCard(BuildContext context, String number, String label, IconData icon) {
+  Widget _buildStatCard(
+      BuildContext context, String number, String label, IconData icon) {
     return Container(
       padding: EdgeInsets.all(16.w),
       decoration: BoxDecoration(
@@ -231,9 +257,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
         borderRadius: BorderRadius.circular(12.r),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
-            blurRadius: 10,
-            offset: const Offset(0, 2),
+            color: Colors.black.withOpacity(0.2),
+            blurRadius: 15,
+            offset: const Offset(0, 4),
           ),
         ],
       ),
@@ -279,6 +305,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 ),
                 TextButton(
                   onPressed: () {},
+                  
                   child: CustomText.s14(
                     AppLocalizations.of(context)!.viewAll,
                     color: Palette.dayBreakBlue.color7,
@@ -345,7 +372,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
     );
   }
 
-  Widget _buildLivestockTypeCard(BuildContext context, String name, String imagePath, String price) {
+  Widget _buildLivestockTypeCard(
+      BuildContext context, String name, String imagePath, String price) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -380,7 +408,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Palette.dayBreakBlue.color7.withOpacity(0.1),
-                      borderRadius: BorderRadius.vertical(top: Radius.circular(12.r)),
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(12.r)),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -477,13 +506,15 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 Container(
                   height: 200.h,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.vertical(top: Radius.circular(16.r)),
+                    borderRadius:
+                        BorderRadius.vertical(top: Radius.circular(16.r)),
                     color: Palette.dayBreakBlue.color7.withOpacity(0.1),
                   ),
                   child: Stack(
                     children: [
                       ClipRRect(
-                        borderRadius: BorderRadius.vertical(top: Radius.circular(16.r)),
+                        borderRadius:
+                            BorderRadius.vertical(top: Radius.circular(16.r)),
                         child: Image.asset(
                           'assets/images/cow.png',
                           height: 200.h,
@@ -494,8 +525,10 @@ class _HomePageScreenState extends State<HomePageScreen> {
                               height: 200.h,
                               width: double.infinity,
                               decoration: BoxDecoration(
-                                color: Palette.dayBreakBlue.color7.withOpacity(0.1),
-                                borderRadius: BorderRadius.vertical(top: Radius.circular(16.r)),
+                                color: Palette.dayBreakBlue.color7
+                                    .withOpacity(0.1),
+                                borderRadius: BorderRadius.vertical(
+                                    top: Radius.circular(16.r)),
                               ),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -503,12 +536,14 @@ class _HomePageScreenState extends State<HomePageScreen> {
                                   Icon(
                                     Icons.image_not_supported,
                                     size: 60.sp,
-                                    color: Palette.dayBreakBlue.color7.withOpacity(0.5),
+                                    color: Palette.dayBreakBlue.color7
+                                        .withOpacity(0.5),
                                   ),
                                   8.verticalSpace,
                                   CustomText.s14(
                                     'Image not found',
-                                    color: Palette.dayBreakBlue.color7.withOpacity(0.5),
+                                    color: Palette.dayBreakBlue.color7
+                                        .withOpacity(0.5),
                                   ),
                                 ],
                               ),
@@ -520,7 +555,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
                         top: 12.h,
                         right: 12.w,
                         child: Container(
-                          padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 8.w, vertical: 4.h),
                           decoration: BoxDecoration(
                             color: Colors.green,
                             borderRadius: BorderRadius.circular(12.r),
@@ -545,7 +581,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
                           Container(
                             padding: EdgeInsets.all(8.w),
                             decoration: BoxDecoration(
-                              color: Palette.dayBreakBlue.color7.withOpacity(0.1),
+                              color:
+                                  Palette.dayBreakBlue.color7.withOpacity(0.1),
                               borderRadius: BorderRadius.circular(8.r),
                             ),
                             child: Icon(
@@ -560,14 +597,15 @@ class _HomePageScreenState extends State<HomePageScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 CustomText.s16(
-                                  AppLocalizations.of(context)!.workInProgress,
+                                  AppLocalizations.of(context)!.localcow,
                                   color: Palette.dayBreakBlue.color7,
                                   bold: true,
                                 ),
                                 4.verticalSpace,
                                 CustomText.s12(
                                   '${AppLocalizations.of(context)!.years} 4 • ${AppLocalizations.of(context)!.months} 6',
-                                  color: Palette.dayBreakBlue.color7.withOpacity(0.7),
+                                  color: Palette.dayBreakBlue.color7
+                                      .withOpacity(0.7),
                                 ),
                               ],
                             ),
@@ -589,7 +627,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
                               4.verticalSpace,
                               CustomText.s12(
                                 AppLocalizations.of(context)!.saudiRiyal,
-                                color: Palette.dayBreakBlue.color7.withOpacity(0.7),
+                                color: Palette.dayBreakBlue.color7
+                                    .withOpacity(0.7),
                               ),
                             ],
                           ),
@@ -598,7 +637,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Palette.dayBreakBlue.color7,
                               foregroundColor: Colors.white,
-                              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 12.h),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 20.w, vertical: 12.h),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8.r),
                               ),

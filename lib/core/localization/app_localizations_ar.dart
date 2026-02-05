@@ -200,16 +200,19 @@ class AppLocalizationsAr extends AppLocalizations {
   String get viewAllLivestock => 'تصفح الذبائح الآن';
 
   @override
+  String get morethanXanimalsavailable => 'أكثر من 5000+ حيوان متاح';
+
+  @override
   String get availableNow => 'متوفر الآن';
 
   @override
-  String get employees => 'موظفين';
+  String get satisfiedcustomer => 'عميل راضي';
 
   @override
   String get qualityGuarantee => 'ضمان الجودة';
 
   @override
-  String get hoursService => 'خدمة على مدار الساعة';
+  String get continuoussupport => 'دعم متواصل';
 
   @override
   String get livestockByType => 'تصنيف حسب النوع';
@@ -218,7 +221,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get viewAll => 'عرض الكل';
 
   @override
-  String get naeemi => 'خروف';
+  String get naeemi => 'نعيمي';
 
   @override
   String get najdi => 'نجدي';
@@ -236,7 +239,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get specialOffers => 'عروض مميزة من الماشية';
 
   @override
-  String get workInProgress => 'عمل بلدي';
+  String get localcow => 'عجل بلدي';
 
   @override
   String get years => 'سنة';
@@ -264,4 +267,64 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get thebestinKingdom => 'الأفضل في المملكة';
+
+  @override
+  String get whyChooseUs => 'لماذا نختارنا';
+
+  @override
+  String get whyChooseUsSubtitle => 'نقدم لك أفضل تجربة شراء للذبائح';
+
+  @override
+  String get guaranteedQuality => 'جودة مضمونة 100%';
+
+  @override
+  String get guaranteedQualityDesc =>
+      'جميع حيواناتنا تجتاز الفحوصات البيطرية دقيقة وتتمتع بأعلى معايير الجودة والصحة';
+
+  @override
+  String get competitivePrices => 'أسعار تنافسية';
+
+  @override
+  String get competitivePricesDesc =>
+      'نوفر لك أفضل الأسعار في السوق مع إمكانية المقارنة مع المنافسين الآخرين';
+
+  @override
+  String get support247 => 'دعم فني 24/7';
+
+  @override
+  String get support247Desc =>
+      'فريقنا متاح على مدار الساعة لتلبية احتياجاتك على استفساراتك ومساعدتك في خدمة الأنسب';
+
+  @override
+  String get fastDelivery => 'توصيل سريع وآمن';
+
+  @override
+  String get fastDeliveryDesc =>
+      'نوفر خدمة توصيل احترافية لجميع مناطق المملكة مع ضمان سرعة الوصول';
+
+  @override
+  String get healthGuarantee => 'ضمان صحي شامل';
+
+  @override
+  String get healthGuaranteeDesc =>
+      'نقدم ضمان صحي لجميع الحيوانات على جميع أنواع الحيوانات المباعة';
+
+  @override
+  String get specialOffer => 'عرض خاص';
+
+  @override
+  String get discountUpTo => 'خصم 15% على جميع الأضاحي';
+
+  @override
+  String get offerDescription =>
+      'عرض محدود لفترة محدودة احجز الآن واحصل على خصم مميز عند الشراء اليوم';
+
+  @override
+  String get daysLeft => 'أيام';
+
+  @override
+  String get hoursLeft => 'ساعة';
+
+  @override
+  String get benefitNow => 'استفد من العرض الآن';
 }

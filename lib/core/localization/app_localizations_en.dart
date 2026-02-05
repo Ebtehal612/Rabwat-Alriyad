@@ -200,16 +200,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get viewAllLivestock => 'Browse Livestock Now';
 
   @override
+  String get morethanXanimalsavailable => 'More than 5000+ animals available';
+
+  @override
   String get availableNow => 'Available Now';
 
   @override
-  String get employees => 'Employees';
+  String get satisfiedcustomer => 'Satisfied customer';
 
   @override
   String get qualityGuarantee => 'Quality Guarantee';
 
   @override
-  String get hoursService => '24/7 Service';
+  String get continuoussupport => 'Continuous Support';
 
   @override
   String get livestockByType => 'Classification by Type';
@@ -236,7 +239,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get specialOffers => 'Special Livestock Offers';
 
   @override
-  String get workInProgress => 'Local Work';
+  String get localcow => 'Local Cow';
 
   @override
   String get years => 'Years';
@@ -264,4 +267,65 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get thebestinKingdom => 'The best in Kingdom';
+
+  @override
+  String get whyChooseUs => 'Why Choose Us';
+
+  @override
+  String get whyChooseUsSubtitle =>
+      'We provide you with the best livestock purchasing experience';
+
+  @override
+  String get guaranteedQuality => '100% Guaranteed Quality';
+
+  @override
+  String get guaranteedQualityDesc =>
+      'All our animals pass rigorous veterinary examinations and enjoy the highest standards of quality and health';
+
+  @override
+  String get competitivePrices => 'Competitive Prices';
+
+  @override
+  String get competitivePricesDesc =>
+      'We offer you the best prices in the market with the ability to compare with other competitors';
+
+  @override
+  String get support247 => '24/7 Technical Support';
+
+  @override
+  String get support247Desc =>
+      'Our team is available around the clock to meet your needs, answer your inquiries and help you with the most suitable service';
+
+  @override
+  String get fastDelivery => 'Fast and Safe Delivery';
+
+  @override
+  String get fastDeliveryDesc =>
+      'We provide professional delivery service to all regions of the Kingdom with guaranteed speed of arrival';
+
+  @override
+  String get healthGuarantee => 'Comprehensive Health Guarantee';
+
+  @override
+  String get healthGuaranteeDesc =>
+      'We provide health guarantee for all animals on all types of animals sold';
+
+  @override
+  String get specialOffer => 'Special Offer';
+
+  @override
+  String get discountUpTo => '15% discount on all sacrifices';
+
+  @override
+  String get offerDescription =>
+      'Limited offer for a limited time. Book now and get a special discount when you buy today';
+
+  @override
+  String get daysLeft => 'Days';
+
+  @override
+  String get hoursLeft => 'Hours';
+
+  @override
+  String get benefitNow => 'Benefit from the offer now';
 }

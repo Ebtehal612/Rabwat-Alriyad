@@ -374,17 +374,23 @@ abstract class AppLocalizations {
   /// **'Browse Livestock Now'**
   String get viewAllLivestock;
 
+  /// No description provided for @morethanXanimalsavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'More than 5000+ animals available'**
+  String get morethanXanimalsavailable;
+
   /// No description provided for @availableNow.
   ///
   /// In en, this message translates to:
   /// **'Available Now'**
   String get availableNow;
 
-  /// No description provided for @employees.
+  /// No description provided for @satisfiedcustomer.
   ///
   /// In en, this message translates to:
-  /// **'Employees'**
-  String get employees;
+  /// **'Satisfied customer'**
+  String get satisfiedcustomer;
 
   /// No description provided for @qualityGuarantee.
   ///
@@ -392,11 +398,11 @@ abstract class AppLocalizations {
   /// **'Quality Guarantee'**
   String get qualityGuarantee;
 
-  /// No description provided for @hoursService.
+  /// No description provided for @continuoussupport.
   ///
   /// In en, this message translates to:
-  /// **'24/7 Service'**
-  String get hoursService;
+  /// **'Continuous Support'**
+  String get continuoussupport;
 
   /// No description provided for @livestockByType.
   ///
@@ -446,11 +452,11 @@ abstract class AppLocalizations {
   /// **'Special Livestock Offers'**
   String get specialOffers;
 
-  /// No description provided for @workInProgress.
+  /// No description provided for @localcow.
   ///
   /// In en, this message translates to:
-  /// **'Local Work'**
-  String get workInProgress;
+  /// **'Local Cow'**
+  String get localcow;
 
   /// No description provided for @years.
   ///
@@ -505,6 +511,114 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'The best in Kingdom'**
   String get thebestinKingdom;
+
+  /// No description provided for @whyChooseUs.
+  ///
+  /// In en, this message translates to:
+  /// **'Why Choose Us'**
+  String get whyChooseUs;
+
+  /// No description provided for @whyChooseUsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'We provide you with the best livestock purchasing experience'**
+  String get whyChooseUsSubtitle;
+
+  /// No description provided for @guaranteedQuality.
+  ///
+  /// In en, this message translates to:
+  /// **'100% Guaranteed Quality'**
+  String get guaranteedQuality;
+
+  /// No description provided for @guaranteedQualityDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'All our animals pass rigorous veterinary examinations and enjoy the highest standards of quality and health'**
+  String get guaranteedQualityDesc;
+
+  /// No description provided for @competitivePrices.
+  ///
+  /// In en, this message translates to:
+  /// **'Competitive Prices'**
+  String get competitivePrices;
+
+  /// No description provided for @competitivePricesDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'We offer you the best prices in the market with the ability to compare with other competitors'**
+  String get competitivePricesDesc;
+
+  /// No description provided for @support247.
+  ///
+  /// In en, this message translates to:
+  /// **'24/7 Technical Support'**
+  String get support247;
+
+  /// No description provided for @support247Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Our team is available around the clock to meet your needs, answer your inquiries and help you with the most suitable service'**
+  String get support247Desc;
+
+  /// No description provided for @fastDelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Fast and Safe Delivery'**
+  String get fastDelivery;
+
+  /// No description provided for @fastDeliveryDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'We provide professional delivery service to all regions of the Kingdom with guaranteed speed of arrival'**
+  String get fastDeliveryDesc;
+
+  /// No description provided for @healthGuarantee.
+  ///
+  /// In en, this message translates to:
+  /// **'Comprehensive Health Guarantee'**
+  String get healthGuarantee;
+
+  /// No description provided for @healthGuaranteeDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'We provide health guarantee for all animals on all types of animals sold'**
+  String get healthGuaranteeDesc;
+
+  /// No description provided for @specialOffer.
+  ///
+  /// In en, this message translates to:
+  /// **'Special Offer'**
+  String get specialOffer;
+
+  /// No description provided for @discountUpTo.
+  ///
+  /// In en, this message translates to:
+  /// **'15% discount on all sacrifices'**
+  String get discountUpTo;
+
+  /// No description provided for @offerDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Limited offer for a limited time. Book now and get a special discount when you buy today'**
+  String get offerDescription;
+
+  /// No description provided for @daysLeft.
+  ///
+  /// In en, this message translates to:
+  /// **'Days'**
+  String get daysLeft;
+
+  /// No description provided for @hoursLeft.
+  ///
+  /// In en, this message translates to:
+  /// **'Hours'**
+  String get hoursLeft;
+
+  /// No description provided for @benefitNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Benefit from the offer now'**
+  String get benefitNow;
 }
 
 class _AppLocalizationsDelegate
