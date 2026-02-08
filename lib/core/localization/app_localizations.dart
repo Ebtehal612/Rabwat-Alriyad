@@ -545,7 +545,7 @@ abstract class AppLocalizations {
   /// No description provided for @competitivePricesDesc.
   ///
   /// In en, this message translates to:
-  /// **'We offer you the best prices in the market with the ability to compare with other competitors'**
+  /// **'We offer you the best prices in the market'**
   String get competitivePricesDesc;
 
   /// No description provided for @support247.
@@ -557,7 +557,7 @@ abstract class AppLocalizations {
   /// No description provided for @support247Desc.
   ///
   /// In en, this message translates to:
-  /// **'Our team is available around the clock to meet your needs, answer your inquiries and help you with the most suitable service'**
+  /// **'Our team is available 24/7 to answer your questions and help you choose the most suitable option.'**
   String get support247Desc;
 
   /// No description provided for @fastDelivery.
@@ -619,6 +619,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Benefit from the offer now'**
   String get benefitNow;
+
+  /// No description provided for @endsin.
+  ///
+  /// In en, this message translates to:
+  /// **'Ends in'**
+  String get endsin;
+
+  /// No description provided for @piece.
+  ///
+  /// In en, this message translates to:
+  /// **'Piece'**
+  String get piece;
+
+  /// No description provided for @remaining.
+  ///
+  /// In en, this message translates to:
+  /// **'Remaining'**
+  String get remaining;
+
+  /// No description provided for @contactus.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact Us'**
+  String get contactus;
 }
 
 class _AppLocalizationsDelegate

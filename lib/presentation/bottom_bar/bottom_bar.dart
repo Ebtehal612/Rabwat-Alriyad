@@ -41,9 +41,14 @@ class BottomBar extends StatelessWidget {
               label: AppLocalizations.of(context)!.home,
             ),
             NavigationDestination(
-              icon: const Icon(Icons.person_outline),
-              selectedIcon: Icon(Icons.person, color:  Palette.dayBreakBlue.color7),
+              icon: const Icon(Icons.grid_view),
+              selectedIcon: Icon(Icons.grid_view, color:  Palette.dayBreakBlue.color7),
               label: AppLocalizations.of(context)!.products,
+            ),
+            NavigationDestination(
+              icon: const Icon(Icons.support_agent),
+              selectedIcon: Icon(Icons.support_agent, color:  Palette.dayBreakBlue.color7),
+              label: AppLocalizations.of(context)!.contactNow,
             ),
           ],
         ),

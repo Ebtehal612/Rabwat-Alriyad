@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:rabwat_alriyad/core/shared_preferences/prefs_keys.dart';
 import 'package:rabwat_alriyad/core/shared_preferences/shared_prefs.dart';
 import 'package:rabwat_alriyad/presentation/bottom_bar/bottom_bar.dart';
+import 'package:rabwat_alriyad/presentation/contact_us/pages/contact_us_screen.dart';
 import 'package:rabwat_alriyad/presentation/home_page/pages/home_page_screen.dart';
 import 'package:rabwat_alriyad/presentation/products/products_screen.dart';
 import 'package:rabwat_alriyad/presentation/splash/splash_screen.dart';
@@ -61,6 +62,17 @@ class AppRouter {
               ),
             ],
           ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                name: ContactUsScreen.routeName,
+                path: ContactUsScreen.routeName,
+                pageBuilder: (context, state) =>
+                    const NoTransitionPage(child: ContactUsScreen()),
+              ),
+            ],
+          ),
+
         ],
       ),
     ],

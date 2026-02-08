@@ -16,15 +16,19 @@ class WhyChooseUsSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Section Title
-          CustomText.s18(
-            AppLocalizations.of(context)!.whyChooseUs,
-            color: Palette.dayBreakBlue.color7,
-            bold: true,
+          Center(
+            child: CustomText.s18(
+              AppLocalizations.of(context)!.whyChooseUs,
+              color: Palette.dayBreakBlue.color7,
+              bold: true,
+            ),
           ),
           8.verticalSpace,
-          CustomText.s14(
-            AppLocalizations.of(context)!.whyChooseUsSubtitle,
-            color: Palette.dayBreakBlue.color7.withOpacity(0.7),
+          Center(
+            child: CustomText.s14(
+              AppLocalizations.of(context)!.whyChooseUsSubtitle,
+              color: Palette.dayBreakBlue.color7.withOpacity(0.7),
+            ),
           ),
           20.verticalSpace,
           

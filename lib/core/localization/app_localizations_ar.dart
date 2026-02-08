@@ -279,21 +279,20 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get guaranteedQualityDesc =>
-      'جميع حيواناتنا تجتاز الفحوصات البيطرية دقيقة وتتمتع بأعلى معايير الجودة والصحة';
+      'جميع حيواناتنا تخضع لفحوصات بيطرية دقيقة ونضمن لك أعلى معايير الجودة والصحة';
 
   @override
   String get competitivePrices => 'أسعار تنافسية';
 
   @override
-  String get competitivePricesDesc =>
-      'نوفر لك أفضل الأسعار في السوق مع إمكانية المقارنة مع المنافسين الآخرين';
+  String get competitivePricesDesc => 'نوفر لك أفضل الأسعار في السوق';
 
   @override
   String get support247 => 'دعم فني 24/7';
 
   @override
   String get support247Desc =>
-      'فريقنا متاح على مدار الساعة لتلبية احتياجاتك على استفساراتك ومساعدتك في خدمة الأنسب';
+      'فريقنا متاح على مدار الساعة للإجابة على استفساراتك ومساعدتك في اختيار الأنسب';
 
   @override
   String get fastDelivery => 'توصيل سريع وآمن';
@@ -327,4 +326,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get benefitNow => 'استفد من العرض الآن';
+
+  @override
+  String get endsin => 'ينتهي خلال';
+
+  @override
+  String get piece => 'قطعة';
+
+  @override
+  String get remaining => 'متبقي';
+
+  @override
+  String get contactus => 'تواصل معنا';
 }

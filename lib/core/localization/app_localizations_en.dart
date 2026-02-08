@@ -287,14 +287,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get competitivePricesDesc =>
-      'We offer you the best prices in the market with the ability to compare with other competitors';
+      'We offer you the best prices in the market';
 
   @override
   String get support247 => '24/7 Technical Support';
 
   @override
   String get support247Desc =>
-      'Our team is available around the clock to meet your needs, answer your inquiries and help you with the most suitable service';
+      'Our team is available 24/7 to answer your questions and help you choose the most suitable option.';
 
   @override
   String get fastDelivery => 'Fast and Safe Delivery';
@@ -328,4 +328,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get benefitNow => 'Benefit from the offer now';
+
+  @override
+  String get endsin => 'Ends in';
+
+  @override
+  String get piece => 'Piece';
+
+  @override
+  String get remaining => 'Remaining';
+
+  @override
+  String get contactus => 'Contact Us';
 }

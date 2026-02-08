@@ -130,9 +130,9 @@
   "guaranteedQuality":"100% Guaranteed Quality",
   "guaranteedQualityDesc":"All our animals pass rigorous veterinary examinations and enjoy the highest standards of quality and health",
   "competitivePrices":"Competitive Prices",
-  "competitivePricesDesc":"We offer you the best prices in the market with the ability to compare with other competitors",
+  "competitivePricesDesc":"We offer you the best prices in the market",
   "support247":"24/7 Technical Support",
-  "support247Desc":"Our team is available around the clock to meet your needs, answer your inquiries and help you with the most suitable service",
+  "support247Desc":"Our team is available 24/7 to answer your questions and help you choose the most suitable option.",
   "fastDelivery":"Fast and Safe Delivery",
   "fastDeliveryDesc":"We provide professional delivery service to all regions of the Kingdom with guaranteed speed of arrival",
   "healthGuarantee":"Comprehensive Health Guarantee",
@@ -142,5 +142,9 @@
   "offerDescription":"Limited offer for a limited time. Book now and get a special discount when you buy today",
   "daysLeft":"Days",
   "hoursLeft":"Hours",
-  "benefitNow":"Benefit from the offer now"
+  "benefitNow":"Benefit from the offer now",
+  "endsin":"Ends in",
+  "piece":"Piece",
+  "remaining":"Remaining",
+  "contactus":"Contact Us"
 }

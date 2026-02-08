@@ -51,15 +51,22 @@ class SpecialOfferSection extends StatelessWidget {
                   ),
                 ),
                 12.horizontalSpace,
-                CustomText.s16(
-                  AppLocalizations.of(context)!.specialOffer,
-                  color: Colors.white,
-                  bold: true,
+                Container(
+                  padding: EdgeInsets.all(8.w),
+                  decoration: BoxDecoration(
+                    color: Colors.brown.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(15.r),
+                  ),
+                  child: CustomText.s14(
+                    AppLocalizations.of(context)!.specialOffer,
+                    color: Colors.white,
+                    bold: true,
+                  ),
                 ),
               ],
             ),
             20.verticalSpace,
-            
+
             // Main offer text
             CustomText.s20(
               AppLocalizations.of(context)!.discountUpTo,
@@ -67,31 +74,31 @@ class SpecialOfferSection extends StatelessWidget {
               bold: true,
             ),
             8.verticalSpace,
-            
+
             CustomText.s14(
               AppLocalizations.of(context)!.offerDescription,
               color: Colors.white.withOpacity(0.9),
             ),
             24.verticalSpace,
-            
+
             // Countdown timer
             Row(
               children: [
                 _buildTimeCard(
                   context,
-                  value: "5",
-                  label: AppLocalizations.of(context)!.daysLeft,
+                  label: AppLocalizations.of(context)!.endsin,
+                  value: "5 ${AppLocalizations.of(context)!.daysLeft}",
                 ),
                 12.horizontalSpace,
                 _buildTimeCard(
                   context,
-                  value: "47",
-                  label: AppLocalizations.of(context)!.hoursLeft,
+                  label: AppLocalizations.of(context)!.remaining,
+                  value: "47 ${AppLocalizations.of(context)!.piece}",
                 ),
               ],
             ),
             24.verticalSpace,
-            
+
             // CTA Button
             SizedBox(
               width: double.infinity,
@@ -120,7 +127,8 @@ class SpecialOfferSection extends StatelessWidget {
     );
   }
 
-  Widget _buildTimeCard(BuildContext context, {required String value, required String label}) {
+  Widget _buildTimeCard(BuildContext context,
+      {required String value, required String label}) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
       decoration: BoxDecoration(
@@ -132,16 +140,17 @@ class SpecialOfferSection extends StatelessWidget {
         ),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomText.s18(
-            value,
-            color: Colors.white,
-            bold: true,
-          ),
-          4.verticalSpace,
           CustomText.s12(
             label,
             color: Colors.white.withOpacity(0.8),
+          ),
+          4.verticalSpace,
+          CustomText.s16(
+            value,
+            color: Colors.white,
+            bold: true,
           ),
         ],
       ),

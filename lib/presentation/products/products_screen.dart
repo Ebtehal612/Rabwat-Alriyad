@@ -28,7 +28,7 @@ class ProductsScreen extends StatelessWidget {
               ),
               SizedBox(height: 20.h),
               Text(
-                'Profile Screen',
+                'products Screen',
                 style: TextStyle(
                   fontSize: 24.sp,
                   fontWeight: FontWeight.bold,
@@ -36,7 +36,7 @@ class ProductsScreen extends StatelessWidget {
               ),
               SizedBox(height: 10.h),
               Text(
-                'This is a placeholder profile screen.',
+                'This is a placeholder products screen.',
                 style: TextStyle(
                   fontSize: 16.sp,
                   color: Colors.grey[600],
