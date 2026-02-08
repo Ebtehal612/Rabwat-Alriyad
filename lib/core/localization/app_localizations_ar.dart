@@ -387,4 +387,61 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get addtocart => 'أضف إلى السلة';
+
+  @override
+  String get cart => 'عربة التسوق';
+
+  @override
+  String get contactUs => 'اتصل بنا';
+
+  @override
+  String get connectWithUsDirectly => 'تواصل معنا مباشرة';
+
+  @override
+  String get whatsapp => 'واتساب';
+
+  @override
+  String get instantChat => 'تواصل فوري وسريع';
+
+  @override
+  String get additionalContactMethods => 'طرق تواصل إضافية';
+
+  @override
+  String get emailAddress => 'البريد الإلكتروني';
+
+  @override
+  String get followUs => 'تابعنا';
+
+  @override
+  String get instagram => 'انستقرام';
+
+  @override
+  String get snapchat => 'سناب شات';
+
+  @override
+  String get sendMessage => 'أرسل لنا رسالة';
+
+  @override
+  String get fullName => 'الاسم الكامل';
+
+  @override
+  String get enterFullName => 'أدخل اسمك الكامل';
+
+  @override
+  String get mobileNumber => 'رقم الجوال';
+
+  @override
+  String get inquiryType => 'نوع الاستفسار';
+
+  @override
+  String get selectInquiryType => 'اختر نوع الاستفسار';
+
+  @override
+  String get message => 'الرسالة';
+
+  @override
+  String get writeMessageHere => 'اكتب رسالتك هنا...';
+
+  @override
+  String get sendMessageButton => 'إرسال الرسالة';
 }

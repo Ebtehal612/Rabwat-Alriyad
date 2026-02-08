@@ -83,38 +83,41 @@ class _ProductsScreenState extends State<ProductsScreen> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100.h),
-        child: CustomAppBar(
-          height: 100.h,
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w),
-            child: Row(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(12.r),
-                  child: Image.asset(
-                    'assets/images/sheep.png',
-                    height: 80.h,
-                    width: 80.w,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                Expanded(
-                  child: Center(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        CustomText.s18(
-                            AppLocalizations.of(context)!.rabwatalriyad,
-                            color: Palette.dayBreakBlue.color7),
-                        4.verticalSpace,
-                        CustomText.s12(
-                            AppLocalizations.of(context)!.thebestinKingdom,
-                            color: Palette.neutral.color7),
-                      ],
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: CustomAppBar(
+            height: 100.h,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
+              child: Row(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(12.r),
+                    child: Image.asset(
+                      'assets/images/sheep.png',
+                      height: 80.h,
+                      width: 80.w,
+                      fit: BoxFit.cover,
                     ),
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: Center(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          CustomText.s18(
+                              AppLocalizations.of(context)!.rabwatalriyad,
+                              color: Palette.dayBreakBlue.color7),
+                          4.verticalSpace,
+                          CustomText.s12(
+                              AppLocalizations.of(context)!.thebestinKingdom,
+                              color: Palette.neutral.color7),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

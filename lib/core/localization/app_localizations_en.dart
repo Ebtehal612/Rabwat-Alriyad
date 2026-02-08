@@ -389,4 +389,61 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get addtocart => 'Add to cart';
+
+  @override
+  String get cart => 'Cart';
+
+  @override
+  String get contactUs => 'Contact Us';
+
+  @override
+  String get connectWithUsDirectly => 'Connect with us directly';
+
+  @override
+  String get whatsapp => 'WhatsApp';
+
+  @override
+  String get instantChat => 'Instant and fast chat';
+
+  @override
+  String get additionalContactMethods => 'Additional contact methods';
+
+  @override
+  String get emailAddress => 'Email Address';
+
+  @override
+  String get followUs => 'Follow us';
+
+  @override
+  String get instagram => 'Instagram';
+
+  @override
+  String get snapchat => 'Snapchat';
+
+  @override
+  String get sendMessage => 'Send us a message';
+
+  @override
+  String get fullName => 'Full Name';
+
+  @override
+  String get enterFullName => 'Enter your full name';
+
+  @override
+  String get mobileNumber => 'Mobile Number';
+
+  @override
+  String get inquiryType => 'Inquiry Type';
+
+  @override
+  String get selectInquiryType => 'Select inquiry type';
+
+  @override
+  String get message => 'Message';
+
+  @override
+  String get writeMessageHere => 'Write your message here...';
+
+  @override
+  String get sendMessageButton => 'Send Message';
 }

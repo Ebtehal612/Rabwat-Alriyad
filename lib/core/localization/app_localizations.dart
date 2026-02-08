@@ -739,6 +739,120 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Add to cart'**
   String get addtocart;
+
+  /// No description provided for @cart.
+  ///
+  /// In en, this message translates to:
+  /// **'Cart'**
+  String get cart;
+
+  /// No description provided for @contactUs.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact Us'**
+  String get contactUs;
+
+  /// No description provided for @connectWithUsDirectly.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect with us directly'**
+  String get connectWithUsDirectly;
+
+  /// No description provided for @whatsapp.
+  ///
+  /// In en, this message translates to:
+  /// **'WhatsApp'**
+  String get whatsapp;
+
+  /// No description provided for @instantChat.
+  ///
+  /// In en, this message translates to:
+  /// **'Instant and fast chat'**
+  String get instantChat;
+
+  /// No description provided for @additionalContactMethods.
+  ///
+  /// In en, this message translates to:
+  /// **'Additional contact methods'**
+  String get additionalContactMethods;
+
+  /// No description provided for @emailAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Email Address'**
+  String get emailAddress;
+
+  /// No description provided for @followUs.
+  ///
+  /// In en, this message translates to:
+  /// **'Follow us'**
+  String get followUs;
+
+  /// No description provided for @instagram.
+  ///
+  /// In en, this message translates to:
+  /// **'Instagram'**
+  String get instagram;
+
+  /// No description provided for @snapchat.
+  ///
+  /// In en, this message translates to:
+  /// **'Snapchat'**
+  String get snapchat;
+
+  /// No description provided for @sendMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Send us a message'**
+  String get sendMessage;
+
+  /// No description provided for @fullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Full Name'**
+  String get fullName;
+
+  /// No description provided for @enterFullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your full name'**
+  String get enterFullName;
+
+  /// No description provided for @mobileNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile Number'**
+  String get mobileNumber;
+
+  /// No description provided for @inquiryType.
+  ///
+  /// In en, this message translates to:
+  /// **'Inquiry Type'**
+  String get inquiryType;
+
+  /// No description provided for @selectInquiryType.
+  ///
+  /// In en, this message translates to:
+  /// **'Select inquiry type'**
+  String get selectInquiryType;
+
+  /// No description provided for @message.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get message;
+
+  /// No description provided for @writeMessageHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Write your message here...'**
+  String get writeMessageHere;
+
+  /// No description provided for @sendMessageButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Send Message'**
+  String get sendMessageButton;
 }
 
 class _AppLocalizationsDelegate

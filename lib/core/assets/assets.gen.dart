@@ -29,6 +29,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/home.jpg
   AssetGenImage get home => const AssetGenImage('assets/images/home.jpg');
 
+  /// File path: assets/images/insta.png
+  AssetGenImage get insta => const AssetGenImage('assets/images/insta.png');
+
   /// File path: assets/images/nagdy.jpg
   AssetGenImage get nagdy => const AssetGenImage('assets/images/nagdy.jpg');
 
@@ -38,15 +41,40 @@ class $AssetsImagesGen {
   /// File path: assets/images/sheep.png
   AssetGenImage get sheep => const AssetGenImage('assets/images/sheep.png');
 
+  /// File path: assets/images/sheepwhitenum.png
+  AssetGenImage get sheepwhitenum =>
+      const AssetGenImage('assets/images/sheepwhitenum.png');
+
+  /// File path: assets/images/snap.png
+  AssetGenImage get snap => const AssetGenImage('assets/images/snap.png');
+
   /// File path: assets/images/swakni.png
   AssetGenImage get swakni => const AssetGenImage('assets/images/swakni.png');
 
   /// File path: assets/images/tyous.png
   AssetGenImage get tyous => const AssetGenImage('assets/images/tyous.png');
 
+  /// File path: assets/images/whatsapp.png
+  AssetGenImage get whatsapp =>
+      const AssetGenImage('assets/images/whatsapp.png');
+
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [adha, cow, hari, hashee, home, nagdy, neami, sheep, swakni, tyous];
+  List<AssetGenImage> get values => [
+        adha,
+        cow,
+        hari,
+        hashee,
+        home,
+        insta,
+        nagdy,
+        neami,
+        sheep,
+        sheepwhitenum,
+        snap,
+        swakni,
+        tyous,
+        whatsapp
+      ];
 }
 
 class Assets {

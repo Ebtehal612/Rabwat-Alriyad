@@ -7,6 +7,7 @@ import 'package:rabwat_alriyad/core/localization/language_manager.dart';
 import 'package:rabwat_alriyad/core/theme/palette.dart';
 import 'package:rabwat_alriyad/core/widgets/text/custom_text.dart';
 import 'package:rabwat_alriyad/app/di/injection_container.dart';
+import 'package:rabwat_alriyad/presentation/products/pages/products_screen.dart';
 import '../../../core/widgets/app_bars/custom_app_bar.dart';
 import '../widgets/why_choose_us_section.dart';
 import '../widgets/special_offer_section.dart';
@@ -31,54 +32,58 @@ class _HomePageScreenState extends State<HomePageScreen> {
           return Scaffold(
             appBar: PreferredSize(
               preferredSize: Size.fromHeight(100.h),
-              child: CustomAppBar(
-                height: 100.h,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.w),
-                  child: Row(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(12.r),
-                        child: Image.asset(
-                          'assets/images/sheep.png',
-                          height: 80.h,
-                          width: 80.w,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Expanded(
-                        child: Center(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              CustomText.s18(
-                                  AppLocalizations.of(context)!.rabwatalriyad,
-                                  color: Palette.dayBreakBlue.color7),
-                              4.verticalSpace,
-                              CustomText.s12(
-                                  AppLocalizations.of(context)!
-                                      .thebestinKingdom,
-                                  color: Palette.neutral.color7),
-                            ],
+              child: Directionality(
+                textDirection: TextDirection.rtl,
+                child: CustomAppBar(
+                  height: 100.h,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
+                    child: Row(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(12.r),
+                          child: Image.asset(
+                            'assets/images/sheep.png',
+                            height: 80.h,
+                            width: 80.w,
+                            fit: BoxFit.cover,
                           ),
                         ),
-                      ),
-                      IconButton(
-                        onPressed: () => languageManager.toggleLanguage(),
-                        icon: Container(
-                          padding: EdgeInsets.all(8.w),
-                          decoration: BoxDecoration(
-                            color: Palette.dayBreakBlue.color7.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(8.r),
-                          ),
-                          child: CustomText.s12(
-                            languageManager.isArabic ? 'EN' : 'AR',
-                            color: Palette.dayBreakBlue.color7,
-                            bold: true,
+                        Expanded(
+                          child: Center(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                CustomText.s18(
+                                    AppLocalizations.of(context)!.rabwatalriyad,
+                                    color: Palette.dayBreakBlue.color7),
+                                4.verticalSpace,
+                                CustomText.s12(
+                                    AppLocalizations.of(context)!
+                                        .thebestinKingdom,
+                                    color: Palette.neutral.color7),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                        IconButton(
+                          onPressed: () => languageManager.toggleLanguage(),
+                          icon: Container(
+                            padding: EdgeInsets.all(8.w),
+                            decoration: BoxDecoration(
+                              color:
+                                  Palette.dayBreakBlue.color7.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(8.r),
+                            ),
+                            child: CustomText.s12(
+                              languageManager.isArabic ? 'EN' : 'AR',
+                              color: Palette.dayBreakBlue.color7,
+                              bold: true,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -158,7 +163,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10.0, vertical: 4.0),
                       child: CustomText.s14(
-                          AppLocalizations.of(context)!.morethanXanimalsavailable,
+                        AppLocalizations.of(context)!.morethanXanimalsavailable,
                         color: Colors.white,
                       ),
                     )),
@@ -222,7 +227,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
               context,
               '24/7',
               AppLocalizations.of(context)!.continuoussupport,
-              Icons.access_time,
+              Icons.access_time_filled,
+              Palette.dayBreakBlue.color7,
             ),
           ),
           12.horizontalSpace,
@@ -232,6 +238,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
               '8500+',
               AppLocalizations.of(context)!.satisfiedcustomer,
               Icons.people,
+              Palette.green.shade800,
             ),
           ),
           12.horizontalSpace,
@@ -241,6 +248,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
               '100%',
               AppLocalizations.of(context)!.qualityGuarantee,
               Icons.verified,
+              Palette.yellow.shade600,
             ),
           ),
         ],
@@ -248,8 +256,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
     );
   }
 
-  Widget _buildStatCard(
-      BuildContext context, String number, String label, IconData icon) {
+  Widget _buildStatCard(BuildContext context, String number, String label,
+      IconData icon, Color? iconColor) {
     return Container(
       padding: EdgeInsets.all(16.w),
       decoration: BoxDecoration(
@@ -267,7 +275,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
         children: [
           Icon(
             icon,
-            color: Palette.dayBreakBlue.color7,
+            color: iconColor,
             size: 24.sp,
           ),
           8.verticalSpace,
@@ -304,11 +312,22 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   bold: true,
                 ),
                 TextButton(
-                  onPressed: () {},
-                  
-                  child: CustomText.s14(
-                    AppLocalizations.of(context)!.viewAll,
-                    color: Palette.dayBreakBlue.color7,
+                  onPressed: () {
+                    Navigator.pushNamed(context, ProductsScreen.routeName);
+                  },
+                  child: Row(
+                    children: [
+                      CustomText.s14(
+                        AppLocalizations.of(context)!.viewAll,
+                        color: Palette.dayBreakBlue.color7,
+                      ),
+                      4.horizontalSpace,
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        color: Palette.dayBreakBlue.color7,
+                        size: 14.sp,
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -646,11 +665,13 @@ class _HomePageScreenState extends State<HomePageScreen> {
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Icon(Icons.phone, size: 16.sp),
+                                CustomText.s12(
+                                  AppLocalizations.of(context)!.addtocart,
+                                ),
                                 8.horizontalSpace,
-                                CustomText.s14(
-                                  AppLocalizations.of(context)!.contactNow,
-                                  bold: true,
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  size: 16.sp,
                                 ),
                               ],
                             ),
