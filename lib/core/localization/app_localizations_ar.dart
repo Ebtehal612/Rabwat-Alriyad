@@ -337,5 +337,54 @@ class AppLocalizationsAr extends AppLocalizations {
   String get remaining => 'متبقي';
 
   @override
+  String get sheep => 'غنم';
+
+  @override
   String get contactus => 'تواصل معنا';
+
+  @override
+  String get swakni => 'سواكني';
+
+  @override
+  String get hashee => 'حاشي';
+
+  @override
+  String get all => 'الكل';
+
+  @override
+  String get camels => 'إبل';
+
+  @override
+  String get cows => 'أبقار';
+
+  @override
+  String get goats => 'ماعز';
+
+  @override
+  String get eidExclusiveOffers => 'عروض العيد الحصرية';
+
+  @override
+  String get bookNowDiscount =>
+      'احجز الآن واحصل على خصم يصل إلى 15% على مجموعة مختارة من الأضاحي';
+
+  @override
+  String get bookYourSacrifice => 'احجز أضحيتك الآن';
+
+  @override
+  String get offerValidUntil => 'العرض ساري حتى نفاذ الكمية';
+
+  @override
+  String get days => 'أيام';
+
+  @override
+  String get hours => 'ساعات';
+
+  @override
+  String get minutes => 'دقائق';
+
+  @override
+  String get seconds => 'ثواني';
+
+  @override
+  String get addtocart => 'أضف إلى السلة';
 }

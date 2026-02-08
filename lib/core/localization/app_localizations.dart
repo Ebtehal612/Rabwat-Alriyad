@@ -503,13 +503,13 @@ abstract class AppLocalizations {
   /// No description provided for @rabwatalriyad.
   ///
   /// In en, this message translates to:
-  /// **'ربوة الرياض'**
+  /// **'Rabwat Alriyad'**
   String get rabwatalriyad;
 
   /// No description provided for @thebestinKingdom.
   ///
   /// In en, this message translates to:
-  /// **'The best in Kingdom'**
+  /// **'The Best in Kingdom'**
   String get thebestinKingdom;
 
   /// No description provided for @whyChooseUs.
@@ -638,11 +638,107 @@ abstract class AppLocalizations {
   /// **'Remaining'**
   String get remaining;
 
+  /// No description provided for @sheep.
+  ///
+  /// In en, this message translates to:
+  /// **'Sheep'**
+  String get sheep;
+
   /// No description provided for @contactus.
   ///
   /// In en, this message translates to:
   /// **'Contact Us'**
   String get contactus;
+
+  /// No description provided for @swakni.
+  ///
+  /// In en, this message translates to:
+  /// **'Swakni'**
+  String get swakni;
+
+  /// No description provided for @hashee.
+  ///
+  /// In en, this message translates to:
+  /// **'Hashee'**
+  String get hashee;
+
+  /// No description provided for @all.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get all;
+
+  /// No description provided for @camels.
+  ///
+  /// In en, this message translates to:
+  /// **'Camels'**
+  String get camels;
+
+  /// No description provided for @cows.
+  ///
+  /// In en, this message translates to:
+  /// **'Cows'**
+  String get cows;
+
+  /// No description provided for @goats.
+  ///
+  /// In en, this message translates to:
+  /// **'Goats'**
+  String get goats;
+
+  /// No description provided for @eidExclusiveOffers.
+  ///
+  /// In en, this message translates to:
+  /// **'Eid Exclusive Offers'**
+  String get eidExclusiveOffers;
+
+  /// No description provided for @bookNowDiscount.
+  ///
+  /// In en, this message translates to:
+  /// **'Book now and get up to 15% discount on selected sacrifices'**
+  String get bookNowDiscount;
+
+  /// No description provided for @bookYourSacrifice.
+  ///
+  /// In en, this message translates to:
+  /// **'Book your sacrifice now'**
+  String get bookYourSacrifice;
+
+  /// No description provided for @offerValidUntil.
+  ///
+  /// In en, this message translates to:
+  /// **'Offer valid while stocks last'**
+  String get offerValidUntil;
+
+  /// No description provided for @days.
+  ///
+  /// In en, this message translates to:
+  /// **'Days'**
+  String get days;
+
+  /// No description provided for @hours.
+  ///
+  /// In en, this message translates to:
+  /// **'Hours'**
+  String get hours;
+
+  /// No description provided for @minutes.
+  ///
+  /// In en, this message translates to:
+  /// **'Minutes'**
+  String get minutes;
+
+  /// No description provided for @seconds.
+  ///
+  /// In en, this message translates to:
+  /// **'Seconds'**
+  String get seconds;
+
+  /// No description provided for @addtocart.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to cart'**
+  String get addtocart;
 }
 
 class _AppLocalizationsDelegate

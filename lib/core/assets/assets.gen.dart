@@ -17,9 +17,6 @@ class $AssetsImagesGen {
   /// File path: assets/images/adha.jpg
   AssetGenImage get adha => const AssetGenImage('assets/images/adha.jpg');
 
-  /// File path: assets/images/camel.png
-  AssetGenImage get camel => const AssetGenImage('assets/images/camel.png');
-
   /// File path: assets/images/cow.png
   AssetGenImage get cow => const AssetGenImage('assets/images/cow.png');
 
@@ -41,12 +38,15 @@ class $AssetsImagesGen {
   /// File path: assets/images/sheep.png
   AssetGenImage get sheep => const AssetGenImage('assets/images/sheep.png');
 
+  /// File path: assets/images/swakni.png
+  AssetGenImage get swakni => const AssetGenImage('assets/images/swakni.png');
+
   /// File path: assets/images/tyous.png
   AssetGenImage get tyous => const AssetGenImage('assets/images/tyous.png');
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [adha, camel, cow, hari, hashee, home, nagdy, neami, sheep, tyous];
+      [adha, cow, hari, hashee, home, nagdy, neami, sheep, swakni, tyous];
 }
 
 class Assets {

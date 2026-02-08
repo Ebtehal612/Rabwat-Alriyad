@@ -263,10 +263,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get products => 'Products';
 
   @override
-  String get rabwatalriyad => 'ربوة الرياض';
+  String get rabwatalriyad => 'Rabwat Alriyad';
 
   @override
-  String get thebestinKingdom => 'The best in Kingdom';
+  String get thebestinKingdom => 'The Best in Kingdom';
 
   @override
   String get whyChooseUs => 'Why Choose Us';
@@ -339,5 +339,54 @@ class AppLocalizationsEn extends AppLocalizations {
   String get remaining => 'Remaining';
 
   @override
+  String get sheep => 'Sheep';
+
+  @override
   String get contactus => 'Contact Us';
+
+  @override
+  String get swakni => 'Swakni';
+
+  @override
+  String get hashee => 'Hashee';
+
+  @override
+  String get all => 'All';
+
+  @override
+  String get camels => 'Camels';
+
+  @override
+  String get cows => 'Cows';
+
+  @override
+  String get goats => 'Goats';
+
+  @override
+  String get eidExclusiveOffers => 'Eid Exclusive Offers';
+
+  @override
+  String get bookNowDiscount =>
+      'Book now and get up to 15% discount on selected sacrifices';
+
+  @override
+  String get bookYourSacrifice => 'Book your sacrifice now';
+
+  @override
+  String get offerValidUntil => 'Offer valid while stocks last';
+
+  @override
+  String get days => 'Days';
+
+  @override
+  String get hours => 'Hours';
+
+  @override
+  String get minutes => 'Minutes';
+
+  @override
+  String get seconds => 'Seconds';
+
+  @override
+  String get addtocart => 'Add to cart';
 }

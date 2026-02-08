@@ -93,5 +93,20 @@
   "endsin":"ينتهي خلال",
   "piece":"قطعة",
   "remaining":"متبقي",
-  "contactus":"تواصل معنا"
+  "contactus":"تواصل معنا",
+  "swakni": "سواكني",
+  "hashee": "حاشي",
+  "all": "الكل",
+  "camels": "إبل",
+  "cows": "أبقار",
+  "goats": "ماعز",
+  "eidExclusiveOffers": "عروض العيد الحصرية",
+  "bookNowDiscount": "احجز الآن واحصل على خصم يصل إلى 15% على مجموعة مختارة من الأضاحي",
+  "bookYourSacrifice": "احجز أضحيتك الآن",
+  "offerValidUntil": "العرض ساري حتى نفاذ الكمية",
+  "days": "أيام",
+  "hours": "ساعات",
+  "minutes": "دقائق",
+  "seconds": "ثواني",
+  "addtocart":"أضف إلى السلة"
 }
