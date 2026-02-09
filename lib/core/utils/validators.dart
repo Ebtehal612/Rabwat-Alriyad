@@ -22,6 +22,32 @@ class Validators {
     return null;
   }
 
+  String? saudiMobile(String? value) {
+    if (value == null || value.isEmpty) {
+      return required(value, title: lz.mobileNumber);
+    }
+
+    // Remove any non-digit characters except '+'
+    String cleanValue = value.replaceAll(RegExp(r'[^\d+]'), '');
+
+    // Check if it starts with 05 and has 10 digits
+    if (cleanValue.startsWith('05') && cleanValue.length == 10) {
+      return null;
+    }
+
+    // Check if it starts with +9665 and has 13 digits
+    if (cleanValue.startsWith('+9665') && cleanValue.length == 13) {
+      return null;
+    }
+    
+     // Check if it starts with 9665 and has 12 digits (sometimes + is omitted)
+    if (cleanValue.startsWith('9665') && cleanValue.length == 12) {
+      return null;
+    }
+
+    return lz.invalidPhoneNumber;
+  }
+
   String? password(String? value) {
     if (value == null || value.isEmpty) {
       return required(value, title: lz.password);

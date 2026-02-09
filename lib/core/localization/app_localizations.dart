@@ -853,6 +853,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Send Message'**
   String get sendMessageButton;
+
+  /// No description provided for @priceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Price'**
+  String get priceLabel;
+
+  /// No description provided for @additions.
+  ///
+  /// In en, this message translates to:
+  /// **'Additions'**
+  String get additions;
+
+  /// No description provided for @payNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Pay Now'**
+  String get payNow;
 }
 
 class _AppLocalizationsDelegate

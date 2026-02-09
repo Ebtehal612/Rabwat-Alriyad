@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../app/di/injection_container.dart';
 import '../../theme/palette.dart';
@@ -27,6 +28,7 @@ class CustomInput extends StatefulWidget {
     this.showAsterisk = true,
     this.border = false,
     this.initialValue,
+    this.inputFormatters,
   }) : _obscureNotifier = null;
 
   CustomInput.obscure({
@@ -41,6 +43,7 @@ class CustomInput extends StatefulWidget {
     this.border = false,
     this.initialValue,
     this.validator,
+    this.inputFormatters,
   })  : hint = null,
         prefix = null,
         enabled = true,
@@ -52,6 +55,8 @@ class CustomInput extends StatefulWidget {
         suffix = null,
         _obscureNotifier = ValueNotifier(true),
         assert(controller != null);
+
+  final List<TextInputFormatter>? inputFormatters;
   final bool editable;
   final String? title;
   final String? hint;
@@ -198,6 +203,7 @@ class _CustomInputState extends State<CustomInput> {
             enabled: widget.enabled,
             textInputAction: widget.textInputAction,
             autovalidateMode: AutovalidateMode.onUserInteraction,
+            inputFormatters: widget.inputFormatters,
             onTapOutside: (_) => FocusScope.of(context).unfocus(),
             decoration: InputDecoration(
               border: widget.border ? InputBorder.none : null,

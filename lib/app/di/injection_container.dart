@@ -1,3 +1,4 @@
+import 'package:flutter_libphonenumber/flutter_libphonenumber.dart' as flp;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:rabwat_alriyad/app/route_manager/app_router.dart';
@@ -7,12 +8,17 @@ import 'package:rabwat_alriyad/core/localization/language_manager.dart';
 import 'package:rabwat_alriyad/core/network/network_setup.dart';
 import 'package:rabwat_alriyad/core/shared_preferences/shared_prefs.dart';
 import 'package:rabwat_alriyad/core/theme/app_theme.dart';
+import 'package:rabwat_alriyad/core/utils/validators.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final sl = GetIt.instance;
 
 Future<void> init() async {
   // External
+  await flp.init();
+  final saCountry = (await flp.getAllSupportedRegions())['SA']!;
+  sl.registerSingleton<flp.CountryWithPhoneCode>(saCountry);
+
   final sharedPreferences = await SharedPreferences.getInstance();
   sl.registerLazySingleton(() => sharedPreferences);
   sl.registerLazySingleton(() => const FlutterSecureStorage());
@@ -24,6 +30,7 @@ Future<void> init() async {
   sl.registerLazySingleton(() => AppRouter());
   sl.registerLazySingleton<LocaleCubit>(() => LocaleCubit());
   sl.registerLazySingleton<LanguageManager>(() => LanguageManager());
+  sl.registerLazySingleton<Validators>(() => Validators());
 
   // Data Sources
   //sl.registerLazySingleton<ProfileRemoteDataSource>(

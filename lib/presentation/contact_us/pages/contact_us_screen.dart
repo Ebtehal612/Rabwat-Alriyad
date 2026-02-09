@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_libphonenumber/flutter_libphonenumber.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rabwat_alriyad/app/di/injection_container.dart';
+import 'package:rabwat_alriyad/core/utils/validators.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/localization/localization_manager.dart';
 import '../../../../core/theme/palette.dart';
 import '../../../../core/widgets/buttons/custom_button.dart';
-import '../../../../core/widgets/drop_down/custom_dropdown.dart';
 import '../../../../core/widgets/fields/custom_input.dart';
 
 class ContactUsScreen extends StatelessWidget {
@@ -329,8 +331,7 @@ class ContactUsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildSocialItem(String imagePath, String label,
-      {bool isSnap = false}) {
+  Widget _buildSocialItem(String imagePath, String label) {
     return Expanded(
       child: Container(
         padding: EdgeInsets.symmetric(vertical: 20.h),
@@ -351,8 +352,6 @@ class ContactUsScreen extends StatelessWidget {
             Image.asset(
               imagePath,
               height: 40.h,
-              color: isSnap ? const Color(0xFFFFFC00) : null,
-              colorBlendMode: isSnap ? BlendMode.srcIn : null,
             ),
             SizedBox(height: 12.h),
             Text(
@@ -407,43 +406,46 @@ class ContactUsScreen extends StatelessWidget {
               CustomInput(
                 title: lz.fullName,
                 hint: lz.enterFullName,
+                hintColor: Palette.neutral.color7,
                 controller: TextEditingController(),
                 backgroundColor: const Color(0xffF9F9F9),
                 border: true,
-                suffix: Icon(Icons.person_outline, color: Colors.grey[400]),
+                prefix: Icon(Icons.person_outline, color: Colors.grey[400]),
               ),
               SizedBox(height: 20.h),
               CustomInput(
                 title: lz.mobileNumber,
                 hint: '05xxxxxxxx',
+                hintColor: Palette.neutral.color7,
                 controller: TextEditingController(),
                 backgroundColor: const Color(0xffF9F9F9),
                 border: true,
-                suffix: Icon(Icons.phone_android, color: Colors.grey[400]),
+                prefix: Icon(Icons.phone_android, color: Colors.grey[400]),
                 keyboardType: TextInputType.phone,
+                validator: sl<Validators>().saudiMobile,
+                inputFormatters: [
+                  LibPhonenumberTextFormatter(
+                    country: sl<CountryWithPhoneCode>(),
+                    inputContainsCountryCode: true,
+                  ),
+                ],
               ),
               SizedBox(height: 20.h),
               CustomInput(
                 title: lz.emailAddress,
                 hint: 'example@email.com',
+                hintColor: Palette.neutral.color7,
                 controller: TextEditingController(),
                 backgroundColor: const Color(0xffF9F9F9),
                 border: true,
-                suffix: Icon(Icons.email_outlined, color: Colors.grey[400]),
+                prefix: Icon(Icons.email_outlined, color: Colors.grey[400]),
                 keyboardType: TextInputType.emailAddress,
-              ),
-              SizedBox(height: 20.h),
-              CustomDropdown<String>(
-                title: lz.inquiryType,
-                hint: lz.selectInquiryType,
-                items: const ['General', 'Sales', 'Support'],
-                itemToString: (item) => item ?? '',
-                value: ValueNotifier(null),
               ),
               SizedBox(height: 20.h),
               CustomInput(
                 title: lz.message,
                 hint: lz.writeMessageHere,
+                hintColor: Palette.neutral.color7,
                 controller: TextEditingController(),
                 backgroundColor: const Color(0xffF9F9F9),
                 border: true,

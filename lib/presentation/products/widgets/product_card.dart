@@ -84,46 +84,97 @@ class ProductCard extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(12.w),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CustomText.s14(
-                    name,
-                    color: Palette.dayBreakBlue.color7,
-                    bold: true,
-                  ),
-                  8.verticalSpace,
-                  Row(
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CustomText.s12(
-                        '$price ${AppLocalizations.of(context)!.sar}',
+                      CustomText.s18(
+                        name,
                         color: Palette.dayBreakBlue.color7,
                         bold: true,
+                        overflow: true,
                       ),
-                      const Spacer(),
+                      4.verticalSpace,
+                      CustomText.s10(
+                        AppLocalizations.of(context)!.priceLabel,
+                        color: Palette.neutral.color7,
+                      ),
+                      4.verticalSpace,
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          CustomText.s18(
+                            price,
+                            color: Palette.dayBreakBlue.color7,
+                            bold: true,
+                          ),
+                          4.horizontalSpace,
+                          CustomText.s12(
+                            AppLocalizations.of(context)!.sar,
+                            color: Palette.dayBreakBlue.color7,
+                            bold: true,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  // Left Side: Buttons and Actions
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                       ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Palette.dayBreakBlue.color7,
                           foregroundColor: Colors.white,
-                          padding: EdgeInsets.all(10.w),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 50.w, vertical: 8.h),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(40.r),
                           ),
                         ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            CustomText.s12(
-                              AppLocalizations.of(context)!.addtocart,
-                            ),
-                            8.horizontalSpace,
-                            Icon(
-                              Icons.arrow_forward_ios,
-                              size: 16.sp,
-                            ),
-                          ],
+                        child: CustomText.s12(
+                          AppLocalizations.of(context)!.addtocart,
+                          color: Colors.white,
                         ),
+                      ),
+                      12.verticalSpace,
+                      Row(
+                        children: [
+                          OutlinedButton(
+                            onPressed: () {},
+                            style: OutlinedButton.styleFrom(
+                              side: BorderSide(
+                                  color: Palette.dayBreakBlue.color7),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.r),
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 25.w, vertical: 2.h),
+                            ),
+                            child: CustomText.s10(
+                              AppLocalizations.of(context)!.payNow,
+                              color: Palette.dayBreakBlue.color7,
+                            ),
+                          ),
+                          10.horizontalSpace,
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.add_circle_outline,
+                                color: Palette.dayBreakBlue.color7,
+                                size: 20.sp,
+                              ),
+                              4.horizontalSpace,
+                              CustomText.s12(
+                                AppLocalizations.of(context)!.additions,
+                                color: Palette.dayBreakBlue.color7,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ],
                   ),

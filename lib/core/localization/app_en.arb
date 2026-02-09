@@ -181,5 +181,8 @@
   "selectInquiryType": "Select inquiry type",
   "message": "Message",
   "writeMessageHere": "Write your message here...",
-  "sendMessageButton": "Send Message"
+  "sendMessageButton": "Send Message",
+  "priceLabel": "Price",
+  "additions": "Additions",
+  "payNow": "Pay Now"
 }

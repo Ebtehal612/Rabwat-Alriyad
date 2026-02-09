@@ -446,4 +446,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sendMessageButton => 'Send Message';
+
+  @override
+  String get priceLabel => 'Price';
+
+  @override
+  String get additions => 'Additions';
+
+  @override
+  String get payNow => 'Pay Now';
 }

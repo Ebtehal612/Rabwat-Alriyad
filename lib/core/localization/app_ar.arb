@@ -127,5 +127,8 @@
   "selectInquiryType": "اختر نوع الاستفسار",
   "message": "الرسالة",
   "writeMessageHere": "اكتب رسالتك هنا...",
-  "sendMessageButton": "إرسال الرسالة"
+  "sendMessageButton": "إرسال الرسالة",
+  "priceLabel": "السعر",
+  "additions": "الإضافات",
+  "payNow": "ادفع الان"
 }

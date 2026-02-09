@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:rabwat_alriyad/core/assets/assets.gen.dart';
 import 'package:rabwat_alriyad/core/localization/app_localizations.dart';
@@ -35,55 +36,51 @@ class _HomePageScreenState extends State<HomePageScreen> {
               child: Directionality(
                 textDirection: TextDirection.rtl,
                 child: CustomAppBar(
-                  height: 100.h,
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16.w),
-                    child: Row(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(12.r),
-                          child: Image.asset(
-                            'assets/images/sheep.png',
-                            height: 80.h,
-                            width: 80.w,
-                            fit: BoxFit.cover,
+                  height: 150.h,
+                  child: Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12.r),
+                        child: Image.asset(
+                          'assets/images/sheep.png',
+                          height: 80.h,
+                          width: 80.w,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Expanded(
+                        child: Center(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              CustomText.s18(
+                                  AppLocalizations.of(context)!.rabwatalriyad,
+                                  color: Palette.dayBreakBlue.color7),
+                              4.verticalSpace,
+                              CustomText.s12(
+                                  AppLocalizations.of(context)!
+                                      .thebestinKingdom,
+                                  color: Palette.neutral.color7),
+                            ],
                           ),
                         ),
-                        Expanded(
-                          child: Center(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                CustomText.s18(
-                                    AppLocalizations.of(context)!.rabwatalriyad,
-                                    color: Palette.dayBreakBlue.color7),
-                                4.verticalSpace,
-                                CustomText.s12(
-                                    AppLocalizations.of(context)!
-                                        .thebestinKingdom,
-                                    color: Palette.neutral.color7),
-                              ],
-                            ),
+                      ),
+                      IconButton(
+                        onPressed: () => languageManager.toggleLanguage(),
+                        icon: Container(
+                          padding: EdgeInsets.all(8.w),
+                          decoration: BoxDecoration(
+                            color: Palette.dayBreakBlue.color7.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(8.r),
+                          ),
+                          child: CustomText.s12(
+                            languageManager.isArabic ? 'EN' : 'AR',
+                            color: Palette.dayBreakBlue.color7,
+                            bold: true,
                           ),
                         ),
-                        IconButton(
-                          onPressed: () => languageManager.toggleLanguage(),
-                          icon: Container(
-                            padding: EdgeInsets.all(8.w),
-                            decoration: BoxDecoration(
-                              color:
-                                  Palette.dayBreakBlue.color7.withOpacity(0.1),
-                              borderRadius: BorderRadius.circular(8.r),
-                            ),
-                            child: CustomText.s12(
-                              languageManager.isArabic ? 'EN' : 'AR',
-                              color: Palette.dayBreakBlue.color7,
-                              bold: true,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -313,7 +310,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, ProductsScreen.routeName);
+                    context.push(ProductsScreen.routeName);
                   },
                   child: Row(
                     children: [

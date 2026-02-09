@@ -444,4 +444,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get sendMessageButton => 'إرسال الرسالة';
+
+  @override
+  String get priceLabel => 'السعر';
+
+  @override
+  String get additions => 'الإضافات';
+
+  @override
+  String get payNow => 'ادفع الان';
 }
