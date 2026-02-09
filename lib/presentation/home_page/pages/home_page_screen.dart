@@ -9,7 +9,6 @@ import 'package:rabwat_alriyad/core/theme/palette.dart';
 import 'package:rabwat_alriyad/core/widgets/text/custom_text.dart';
 import 'package:rabwat_alriyad/app/di/injection_container.dart';
 import 'package:rabwat_alriyad/presentation/products/pages/products_screen.dart';
-import '../../../core/widgets/app_bars/custom_app_bar.dart';
 import '../widgets/why_choose_us_section.dart';
 import '../widgets/special_offer_section.dart';
 
@@ -35,9 +34,11 @@ class _HomePageScreenState extends State<HomePageScreen> {
               preferredSize: Size.fromHeight(100.h),
               child: Directionality(
                 textDirection: TextDirection.rtl,
-                child: CustomAppBar(
-                  height: 150.h,
+                child: Container(
+                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(12.r),
@@ -177,7 +178,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 16.verticalSpace,
                 Center(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push(ProductsScreen.routeName);
+                    },
                     style: ElevatedButton.styleFrom(
                       minimumSize: Size(250.w, 50.h),
                       backgroundColor: Palette.dayBreakBlue.color7,

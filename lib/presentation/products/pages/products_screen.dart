@@ -3,23 +3,29 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rabwat_alriyad/core/assets/assets.gen.dart';
 import 'package:rabwat_alriyad/core/localization/app_localizations.dart';
 import 'package:rabwat_alriyad/core/theme/palette.dart';
-import 'package:rabwat_alriyad/core/widgets/app_bars/custom_app_bar.dart';
 import 'package:rabwat_alriyad/core/widgets/text/custom_text.dart';
 import 'package:rabwat_alriyad/presentation/products/widgets/product_card.dart';
 import 'package:rabwat_alriyad/presentation/products/widgets/eid_offer_card.dart';
 
 class ProductsScreen extends StatefulWidget {
   static const routeName = '/products';
+  final String initialCategory;
 
-  const ProductsScreen({super.key});
+  const ProductsScreen({super.key, this.initialCategory = 'All'});
 
   @override
   State<ProductsScreen> createState() => _ProductsScreenState();
 }
 
 class _ProductsScreenState extends State<ProductsScreen> {
-  String _selectedFilter = 'all';
+  late String _selectedFilter;
   String _searchQuery = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedFilter = widget.initialCategory.toLowerCase();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -85,39 +91,37 @@ class _ProductsScreenState extends State<ProductsScreen> {
         preferredSize: Size.fromHeight(100.h),
         child: Directionality(
           textDirection: TextDirection.rtl,
-          child: CustomAppBar(
-            height: 100.h,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.w),
-              child: Row(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(12.r),
-                    child: Image.asset(
-                      'assets/images/sheep.png',
-                      height: 80.h,
-                      width: 80.w,
-                      fit: BoxFit.cover,
-                    ),
+          child: Container(
+            color: Colors.white,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12.r),
+                  child: Image.asset(
+                    'assets/images/sheep.png',
+                    height: 80.h,
+                    width: 80.w,
+                    fit: BoxFit.cover,
                   ),
-                  Expanded(
-                    child: Center(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          CustomText.s18(
-                              AppLocalizations.of(context)!.rabwatalriyad,
-                              color: Palette.dayBreakBlue.color7),
-                          4.verticalSpace,
-                          CustomText.s12(
-                              AppLocalizations.of(context)!.thebestinKingdom,
-                              color: Palette.neutral.color7),
-                        ],
-                      ),
+                ),
+                12.horizontalSpace,
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CustomText.s18(
+                      AppLocalizations.of(context)!.rabwatalriyad,
+                      color: Palette.dayBreakBlue.color7,
                     ),
-                  ),
-                ],
-              ),
+                    4.verticalSpace,
+                    CustomText.s12(
+                      AppLocalizations.of(context)!.thebestinKingdom,
+                      color: Palette.neutral.color7,
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ),
@@ -153,9 +157,13 @@ class _ProductsScreenState extends State<ProductsScreen> {
             child: Row(
               children: [
                 _buildFilterChip('all', localizations.all),
+                7.horizontalSpace,
                 _buildFilterChip('sheep', localizations.sheep),
+                7.horizontalSpace,
                 _buildFilterChip('goats', localizations.goats),
+                7.horizontalSpace,
                 _buildFilterChip('cows', localizations.cows),
+                7.horizontalSpace,
                 _buildFilterChip('camels', localizations.camels),
               ],
             ),

@@ -5,15 +5,20 @@ import 'package:rabwat_alriyad/core/localization/app_localizations.dart';
 import 'package:rabwat_alriyad/core/theme/palette.dart';
 import 'package:rabwat_alriyad/core/widgets/app_bars/custom_app_bar.dart';
 import 'package:rabwat_alriyad/core/widgets/text/custom_text.dart';
+import 'package:toastification/toastification.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rabwat_alriyad/core/cubits/additions_cubit.dart';
 
 class AdditionsScreen extends StatelessWidget {
   static const routeName = '/additions';
+  final String productName;
 
-  const AdditionsScreen({super.key});
+  const AdditionsScreen({super.key, required this.productName});
 
   @override
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context)!;
+    final additionsCubit = context.read<AdditionsCubit>();
 
     final List<Map<String, dynamic>> additions = [
       {
@@ -91,7 +96,22 @@ class AdditionsScreen extends StatelessWidget {
                 ),
                 12.verticalSpace,
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    additionsCubit.addAddition(productName, item['name']);
+                    toastification.show(
+                      context: context,
+                      type: ToastificationType.success,
+                      style: ToastificationStyle.flat,
+                      autoCloseDuration: const Duration(seconds: 3),
+                      title: CustomText.s14(
+                        localizations.itemAdded(item['name']),
+                        color: Palette.dayBreakBlue.color7,
+                        bold: true,
+                      ),
+                      alignment: Alignment.topCenter,
+                      showProgressBar: false,
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Palette.dayBreakBlue.color7,
                     foregroundColor: Colors.white,

@@ -8,6 +8,7 @@ import '../core/localization/localization_manager.dart';
 import '../core/localization/language_manager.dart';
 import '../core/theme/app_theme.dart';
 import '../core/cubits/user_cubit.dart';
+import '../core/cubits/additions_cubit.dart';
 import 'di/injection_container.dart';
 import 'route_manager/app_router.dart';
 
@@ -25,6 +26,7 @@ class _MyAppState extends State<MyApp> {
       providers: [
         BlocProvider.value(value: sl<LocaleCubit>()),
         BlocProvider.value(value: sl<UserCubit>()),
+        BlocProvider.value(value: sl<AdditionsCubit>()),
         ChangeNotifierProvider.value(value: sl<LanguageManager>()),
       ],
       child: Consumer<LanguageManager>(

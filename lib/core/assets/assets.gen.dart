@@ -63,6 +63,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/tyous.png
   AssetGenImage get tyous => const AssetGenImage('assets/images/tyous.png');
 
+  /// File path: assets/images/vector.png
+  AssetGenImage get vector => const AssetGenImage('assets/images/vector.png');
+
   /// File path: assets/images/whatsapp.png
   AssetGenImage get whatsapp =>
       const AssetGenImage('assets/images/whatsapp.png');
@@ -85,6 +88,7 @@ class $AssetsImagesGen {
         snap,
         swakni,
         tyous,
+        vector,
         whatsapp
       ];
 }

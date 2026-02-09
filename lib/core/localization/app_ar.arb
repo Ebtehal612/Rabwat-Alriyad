@@ -109,7 +109,7 @@
   "minutes": "دقائق",
   "seconds": "ثواني",
   "addtocart":"أضف إلى السلة",
-  "cart": "عربة التسوق",
+  "cart": "السلة",
   "contactUs": "اتصل بنا",
   "connectWithUsDirectly": "تواصل معنا مباشرة",
   "whatsapp": "واتساب",
@@ -135,5 +135,24 @@
   "trotters": "كوارع غنم",
   "tripe": "كرشة غنم",
   "addToOrder": "اضف الي الطلب",
-  "priceColon": "السعر: "
+  "priceColon": "السعر: ",
+  "itemAdded": "تم إضافة {item} إلى طلبك",
+  "additionsSummary": "كبدة، كوارع، كرشة",
+  "orderCompletion": "إتمام الطلب",
+  "detailedAddress": "العنوان بالتفصيل",
+  "enterDetailedAddress": "أدخل العنوان بالتفصيل",
+  "discountCode": "كود الخصم",
+  "enterDiscountCode": "أدخل كود الخصم",
+  "choosePaymentMethod": "اختر وسيلة الدفع",
+  "bankTransfer": "تحويل بنكي",
+  "attachReceipt": "ارفق صورة الايصال",
+  "cashOnDelivery": "دفع عند الاستلام",
+  "sendOrder": "ارسال الطلب",
+  "@itemAdded": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  }
 }

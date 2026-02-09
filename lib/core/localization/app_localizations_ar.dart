@@ -389,7 +389,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get addtocart => 'أضف إلى السلة';
 
   @override
-  String get cart => 'عربة التسوق';
+  String get cart => 'السلة';
 
   @override
   String get contactUs => 'اتصل بنا';
@@ -468,4 +468,42 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get priceColon => 'السعر: ';
+
+  @override
+  String itemAdded(String item) {
+    return 'تم إضافة $item إلى طلبك';
+  }
+
+  @override
+  String get additionsSummary => 'كبدة، كوارع، كرشة';
+
+  @override
+  String get orderCompletion => 'إتمام الطلب';
+
+  @override
+  String get detailedAddress => 'العنوان بالتفصيل';
+
+  @override
+  String get enterDetailedAddress => 'أدخل العنوان بالتفصيل';
+
+  @override
+  String get discountCode => 'كود الخصم';
+
+  @override
+  String get enterDiscountCode => 'أدخل كود الخصم';
+
+  @override
+  String get choosePaymentMethod => 'اختر وسيلة الدفع';
+
+  @override
+  String get bankTransfer => 'تحويل بنكي';
+
+  @override
+  String get attachReceipt => 'ارفق صورة الايصال';
+
+  @override
+  String get cashOnDelivery => 'دفع عند الاستلام';
+
+  @override
+  String get sendOrder => 'ارسال الطلب';
 }

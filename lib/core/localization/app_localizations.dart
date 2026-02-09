@@ -901,6 +901,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Price: '**
   String get priceColon;
+
+  /// No description provided for @itemAdded.
+  ///
+  /// In en, this message translates to:
+  /// **'{item} added to your order'**
+  String itemAdded(String item);
+
+  /// No description provided for @additionsSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Liver, Trotters, Tripe'**
+  String get additionsSummary;
+
+  /// No description provided for @orderCompletion.
+  ///
+  /// In en, this message translates to:
+  /// **'Order Completion'**
+  String get orderCompletion;
+
+  /// No description provided for @detailedAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Detailed Address'**
+  String get detailedAddress;
+
+  /// No description provided for @enterDetailedAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter detailed address'**
+  String get enterDetailedAddress;
+
+  /// No description provided for @discountCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Discount Code'**
+  String get discountCode;
+
+  /// No description provided for @enterDiscountCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter discount code'**
+  String get enterDiscountCode;
+
+  /// No description provided for @choosePaymentMethod.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose Payment Method'**
+  String get choosePaymentMethod;
+
+  /// No description provided for @bankTransfer.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank Transfer'**
+  String get bankTransfer;
+
+  /// No description provided for @attachReceipt.
+  ///
+  /// In en, this message translates to:
+  /// **'Attach receipt image'**
+  String get attachReceipt;
+
+  /// No description provided for @cashOnDelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash on Delivery'**
+  String get cashOnDelivery;
+
+  /// No description provided for @sendOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'Send Order'**
+  String get sendOrder;
 }
 
 class _AppLocalizationsDelegate

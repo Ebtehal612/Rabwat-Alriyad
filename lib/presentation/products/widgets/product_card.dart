@@ -4,7 +4,10 @@ import 'package:rabwat_alriyad/core/localization/app_localizations.dart';
 import 'package:rabwat_alriyad/core/theme/palette.dart';
 import 'package:rabwat_alriyad/core/widgets/text/custom_text.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rabwat_alriyad/presentation/order_completion/pages/order_completion_screen.dart';
 import 'package:rabwat_alriyad/presentation/products/pages/additions_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rabwat_alriyad/core/cubits/additions_cubit.dart';
 
 class ProductCard extends StatelessWidget {
   final String name;
@@ -120,6 +123,20 @@ class ProductCard extends StatelessWidget {
                           ),
                         ],
                       ),
+                      4.verticalSpace,
+                      BlocBuilder<AdditionsCubit, Map<String, List<String>>>(
+                        builder: (context, state) {
+                          final additions = state[name] ?? [];
+                          if (additions.isEmpty) return const SizedBox.shrink();
+                          return Padding(
+                            padding: EdgeInsets.only(top: 4.h),
+                            child: CustomText.s9(
+                              "+ ${additions.join('، ')}",
+                              color: Colors.green,
+                            ),
+                          );
+                        },
+                      ),
                     ],
                   ),
                   // Left Side: Buttons and Actions
@@ -146,7 +163,9 @@ class ProductCard extends StatelessWidget {
                       Row(
                         children: [
                           OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              context.push(OrderCompletionScreen.routeName);
+                            },
                             style: OutlinedButton.styleFrom(
                               side: BorderSide(
                                   color: Palette.dayBreakBlue.color7),
@@ -164,7 +183,8 @@ class ProductCard extends StatelessWidget {
                           10.horizontalSpace,
                           InkWell(
                             onTap: () {
-                              context.push(AdditionsScreen.routeName);
+                              context
+                                  .push('${AdditionsScreen.routeName}/$name');
                             },
                             child: Row(
                               children: [

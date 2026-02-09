@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:rabwat_alriyad/core/shared_preferences/prefs_keys.dart';
-import 'package:rabwat_alriyad/core/shared_preferences/shared_prefs.dart';
 import 'package:rabwat_alriyad/presentation/bottom_bar/bottom_bar.dart';
 import 'package:rabwat_alriyad/presentation/cart/pages/card_screen.dart';
 import 'package:rabwat_alriyad/presentation/contact_us/pages/contact_us_screen.dart';
 import 'package:rabwat_alriyad/presentation/home_page/pages/home_page_screen.dart';
+import 'package:rabwat_alriyad/presentation/order_completion/pages/order_completion_screen.dart';
 import 'package:rabwat_alriyad/presentation/products/pages/products_screen.dart';
 import 'package:rabwat_alriyad/presentation/products/pages/additions_screen.dart';
 import 'package:rabwat_alriyad/presentation/splash/splash_screen.dart';
-import '../di/injection_container.dart';
 
 class AppRouter {
   final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -18,20 +16,20 @@ class AppRouter {
   GlobalKey<NavigatorState> get navigatorKey => _rootNavigatorKey;
 
   String get _initialLocation {
-    final shared = sl<SharedPrefs>();
-    final user = shared.getSecuredValue(key: PrefsKeys.userDetails);
-    if (user != null) {
-      return SplashScreen.routeName;
-    } else {
-      return SplashScreen
-          .routeName; // Always start with splash, splash decides where to go
-    }
+    return SplashScreen
+        .routeName; // Always start with splash, splash decides where to go
   }
 
   late final router = GoRouter(
     navigatorKey: _rootNavigatorKey,
     initialLocation: _initialLocation,
     routes: [
+      GoRoute(
+        name: OrderCompletionScreen.routeName,
+        path: OrderCompletionScreen.routeName,
+        pageBuilder: (context, state) =>
+            _buildPageWithTransition(const OrderCompletionScreen(), state),
+      ),
       GoRoute(
         name: SplashScreen.routeName,
         path: SplashScreen.routeName,
@@ -40,11 +38,15 @@ class AppRouter {
       ),
       GoRoute(
         name: AdditionsScreen.routeName,
-        path: AdditionsScreen.routeName,
-        pageBuilder: (context, state) =>
-            _buildPageWithTransition(const AdditionsScreen(), state),
+        path: '${AdditionsScreen.routeName}/:productName',
+        pageBuilder: (context, state) {
+          final productName = state.pathParameters['productName'] ?? '';
+          return _buildPageWithTransition(
+            AdditionsScreen(productName: productName),
+            state,
+          );
+        },
       ),
-
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
           return BottomBar(navigationShell: navigationShell);
@@ -56,7 +58,7 @@ class AppRouter {
                 name: HomePageScreen.routeName,
                 path: HomePageScreen.routeName,
                 pageBuilder: (context, state) =>
-                    const NoTransitionPage(child: HomePageScreen()),
+                    _buildPageWithTransition(const HomePageScreen(), state),
               ),
             ],
           ),
@@ -66,7 +68,7 @@ class AppRouter {
                 name: ProductsScreen.routeName,
                 path: ProductsScreen.routeName,
                 pageBuilder: (context, state) =>
-                    const NoTransitionPage(child: ProductsScreen()),
+                    _buildPageWithTransition(const ProductsScreen(), state),
               ),
             ],
           ),
@@ -76,7 +78,7 @@ class AppRouter {
                 name: CartScreen.routeName,
                 path: CartScreen.routeName,
                 pageBuilder: (context, state) =>
-                    const NoTransitionPage(child: CartScreen()),
+                    _buildPageWithTransition(const CartScreen(), state),
               ),
             ],
           ),
@@ -86,35 +88,22 @@ class AppRouter {
                 name: ContactUsScreen.routeName,
                 path: ContactUsScreen.routeName,
                 pageBuilder: (context, state) =>
-                    const NoTransitionPage(child: ContactUsScreen()),
+                    _buildPageWithTransition(const ContactUsScreen(), state),
               ),
             ],
           ),
-          
         ],
       ),
     ],
   );
 
   CustomTransitionPage _buildPageWithTransition(
-    Widget child,
-    GoRouterState state,
-  ) {
+      Widget child, GoRouterState state) {
     return CustomTransitionPage(
       key: state.pageKey,
       child: child,
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
-        // Define the transition animation
-        const begin = Offset(1.0, 0.0); // Slide from right to left
-        const end = Offset.zero;
-        const curve = Curves.easeInOut;
-
-        var tween = Tween(
-          begin: begin,
-          end: end,
-        ).chain(CurveTween(curve: curve));
-
-        return SlideTransition(position: animation.drive(tween), child: child);
+        return FadeTransition(opacity: animation, child: child);
       },
     );
   }

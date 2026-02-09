@@ -470,4 +470,42 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get priceColon => 'Price: ';
+
+  @override
+  String itemAdded(String item) {
+    return '$item added to your order';
+  }
+
+  @override
+  String get additionsSummary => 'Liver, Trotters, Tripe';
+
+  @override
+  String get orderCompletion => 'Order Completion';
+
+  @override
+  String get detailedAddress => 'Detailed Address';
+
+  @override
+  String get enterDetailedAddress => 'Enter detailed address';
+
+  @override
+  String get discountCode => 'Discount Code';
+
+  @override
+  String get enterDiscountCode => 'Enter discount code';
+
+  @override
+  String get choosePaymentMethod => 'Choose Payment Method';
+
+  @override
+  String get bankTransfer => 'Bank Transfer';
+
+  @override
+  String get attachReceipt => 'Attach receipt image';
+
+  @override
+  String get cashOnDelivery => 'Cash on Delivery';
+
+  @override
+  String get sendOrder => 'Send Order';
 }

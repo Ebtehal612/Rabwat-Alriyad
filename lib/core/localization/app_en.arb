@@ -189,5 +189,24 @@
   "trotters": "Lamb Trotters",
   "tripe": "Lamb Tripe",
   "addToOrder": "Add to Order",
-  "priceColon": "Price: "
+  "priceColon": "Price: ",
+  "itemAdded": "{item} added to your order",
+  "additionsSummary": "Liver, Trotters, Tripe",
+  "orderCompletion": "Order Completion",
+  "detailedAddress": "Detailed Address",
+  "enterDetailedAddress": "Enter detailed address",
+  "discountCode": "Discount Code",
+  "enterDiscountCode": "Enter discount code",
+  "choosePaymentMethod": "Choose Payment Method",
+  "bankTransfer": "Bank Transfer",
+  "attachReceipt": "Attach receipt image",
+  "cashOnDelivery": "Cash on Delivery",
+  "sendOrder": "Send Order",
+  "@itemAdded": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  }
 }

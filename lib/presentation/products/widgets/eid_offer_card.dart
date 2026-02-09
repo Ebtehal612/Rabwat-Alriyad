@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rabwat_alriyad/core/localization/app_localizations.dart';
 import 'package:rabwat_alriyad/core/theme/palette.dart';
 import 'package:rabwat_alriyad/core/widgets/text/custom_text.dart';
+import 'package:rabwat_alriyad/presentation/order_completion/pages/order_completion_screen.dart';
 
 class EidOfferCard extends StatelessWidget {
   const EidOfferCard({super.key});
@@ -68,7 +70,9 @@ class EidOfferCard extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                context.push(OrderCompletionScreen.routeName);
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.amber, // Gold/Yellow
                 foregroundColor: Colors.black,
