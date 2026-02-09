@@ -7,6 +7,7 @@ import 'package:rabwat_alriyad/presentation/cart/pages/card_screen.dart';
 import 'package:rabwat_alriyad/presentation/contact_us/pages/contact_us_screen.dart';
 import 'package:rabwat_alriyad/presentation/home_page/pages/home_page_screen.dart';
 import 'package:rabwat_alriyad/presentation/products/pages/products_screen.dart';
+import 'package:rabwat_alriyad/presentation/products/pages/additions_screen.dart';
 import 'package:rabwat_alriyad/presentation/splash/splash_screen.dart';
 import '../di/injection_container.dart';
 
@@ -36,6 +37,12 @@ class AppRouter {
         path: SplashScreen.routeName,
         pageBuilder: (_, state) =>
             _buildPageWithTransition(const SplashScreen(), state),
+      ),
+      GoRoute(
+        name: AdditionsScreen.routeName,
+        path: AdditionsScreen.routeName,
+        pageBuilder: (context, state) =>
+            _buildPageWithTransition(const AdditionsScreen(), state),
       ),
 
       StatefulShellRoute.indexedStack(

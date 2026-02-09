@@ -871,6 +871,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Pay Now'**
   String get payNow;
+
+  /// No description provided for @liver.
+  ///
+  /// In en, this message translates to:
+  /// **'Lamb Liver'**
+  String get liver;
+
+  /// No description provided for @trotters.
+  ///
+  /// In en, this message translates to:
+  /// **'Lamb Trotters'**
+  String get trotters;
+
+  /// No description provided for @tripe.
+  ///
+  /// In en, this message translates to:
+  /// **'Lamb Tripe'**
+  String get tripe;
+
+  /// No description provided for @addToOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to Order'**
+  String get addToOrder;
+
+  /// No description provided for @priceColon.
+  ///
+  /// In en, this message translates to:
+  /// **'Price: '**
+  String get priceColon;
 }
 
 class _AppLocalizationsDelegate

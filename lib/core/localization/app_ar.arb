@@ -130,5 +130,10 @@
   "sendMessageButton": "إرسال الرسالة",
   "priceLabel": "السعر",
   "additions": "الإضافات",
-  "payNow": "ادفع الان"
+  "payNow": "ادفع الان",
+  "liver": "كبدة غنم",
+  "trotters": "كوارع غنم",
+  "tripe": "كرشة غنم",
+  "addToOrder": "اضف الي الطلب",
+  "priceColon": "السعر: "
 }

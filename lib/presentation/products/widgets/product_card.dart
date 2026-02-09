@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rabwat_alriyad/core/localization/app_localizations.dart';
 import 'package:rabwat_alriyad/core/theme/palette.dart';
 import 'package:rabwat_alriyad/core/widgets/text/custom_text.dart';
+import 'package:go_router/go_router.dart';
+import 'package:rabwat_alriyad/presentation/products/pages/additions_screen.dart';
 
 class ProductCard extends StatelessWidget {
   final String name;
@@ -160,19 +162,24 @@ class ProductCard extends StatelessWidget {
                             ),
                           ),
                           10.horizontalSpace,
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.add_circle_outline,
-                                color: Palette.dayBreakBlue.color7,
-                                size: 20.sp,
-                              ),
-                              4.horizontalSpace,
-                              CustomText.s12(
-                                AppLocalizations.of(context)!.additions,
-                                color: Palette.dayBreakBlue.color7,
-                              ),
-                            ],
+                          InkWell(
+                            onTap: () {
+                              context.push(AdditionsScreen.routeName);
+                            },
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.add_circle_outline,
+                                  color: Palette.dayBreakBlue.color7,
+                                  size: 20.sp,
+                                ),
+                                4.horizontalSpace,
+                                CustomText.s12(
+                                  AppLocalizations.of(context)!.additions,
+                                  color: Palette.dayBreakBlue.color7,
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),

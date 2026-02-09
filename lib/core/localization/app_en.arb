@@ -184,5 +184,10 @@
   "sendMessageButton": "Send Message",
   "priceLabel": "Price",
   "additions": "Additions",
-  "payNow": "Pay Now"
+  "payNow": "Pay Now",
+  "liver": "Lamb Liver",
+  "trotters": "Lamb Trotters",
+  "tripe": "Lamb Tripe",
+  "addToOrder": "Add to Order",
+  "priceColon": "Price: "
 }

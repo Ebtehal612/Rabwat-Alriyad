@@ -32,6 +32,15 @@ class $AssetsImagesGen {
   /// File path: assets/images/insta.png
   AssetGenImage get insta => const AssetGenImage('assets/images/insta.png');
 
+  /// File path: assets/images/kawarei.png
+  AssetGenImage get kawarei => const AssetGenImage('assets/images/kawarei.png');
+
+  /// File path: assets/images/kebda.png
+  AssetGenImage get kebda => const AssetGenImage('assets/images/kebda.png');
+
+  /// File path: assets/images/kersha.png
+  AssetGenImage get kersha => const AssetGenImage('assets/images/kersha.png');
+
   /// File path: assets/images/nagdy.jpg
   AssetGenImage get nagdy => const AssetGenImage('assets/images/nagdy.jpg');
 
@@ -66,6 +75,9 @@ class $AssetsImagesGen {
         hashee,
         home,
         insta,
+        kawarei,
+        kebda,
+        kersha,
         nagdy,
         neami,
         sheep,

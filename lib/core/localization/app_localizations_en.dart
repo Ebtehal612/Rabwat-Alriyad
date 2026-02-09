@@ -455,4 +455,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get payNow => 'Pay Now';
+
+  @override
+  String get liver => 'Lamb Liver';
+
+  @override
+  String get trotters => 'Lamb Trotters';
+
+  @override
+  String get tripe => 'Lamb Tripe';
+
+  @override
+  String get addToOrder => 'Add to Order';
+
+  @override
+  String get priceColon => 'Price: ';
 }

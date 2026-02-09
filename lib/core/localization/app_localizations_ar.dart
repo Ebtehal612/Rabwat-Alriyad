@@ -453,4 +453,19 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get payNow => 'ادفع الان';
+
+  @override
+  String get liver => 'كبدة غنم';
+
+  @override
+  String get trotters => 'كوارع غنم';
+
+  @override
+  String get tripe => 'كرشة غنم';
+
+  @override
+  String get addToOrder => 'اضف الي الطلب';
+
+  @override
+  String get priceColon => 'السعر: ';
 }
