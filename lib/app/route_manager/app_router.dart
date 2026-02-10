@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rabwat_alriyad/presentation/bottom_bar/bottom_bar.dart';
-import 'package:rabwat_alriyad/presentation/cart/pages/card_screen.dart';
+import 'package:rabwat_alriyad/presentation/cart/pages/cart_screen.dart';
 import 'package:rabwat_alriyad/presentation/contact_us/pages/contact_us_screen.dart';
 import 'package:rabwat_alriyad/presentation/home_page/pages/home_page_screen.dart';
 import 'package:rabwat_alriyad/presentation/order_completion/pages/order_completion_screen.dart';

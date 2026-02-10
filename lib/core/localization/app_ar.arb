@@ -154,5 +154,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "totalAmount": "المجموع",
+  "proceedToPayment": "الإنتقال للدفع",
+  "quantity": "الكمية",
+  "total": "الاجمالي",
+  "cartEmpty": "سلة التسوق فارغة",
+  "emailHint": "example@email.com",
+  "mobileHint": "٠٥xxxxxxxx",
+  "totalamountrequired":"المبلغ الإجمالي المطلوب"
 }

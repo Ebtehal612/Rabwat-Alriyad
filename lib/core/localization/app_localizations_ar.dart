@@ -506,4 +506,28 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get sendOrder => 'ارسال الطلب';
+
+  @override
+  String get totalAmount => 'المجموع';
+
+  @override
+  String get proceedToPayment => 'الإنتقال للدفع';
+
+  @override
+  String get quantity => 'الكمية';
+
+  @override
+  String get total => 'الاجمالي';
+
+  @override
+  String get cartEmpty => 'سلة التسوق فارغة';
+
+  @override
+  String get emailHint => 'example@email.com';
+
+  @override
+  String get mobileHint => '٠٥xxxxxxxx';
+
+  @override
+  String get totalamountrequired => 'المبلغ الإجمالي المطلوب';
 }

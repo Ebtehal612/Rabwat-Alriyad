@@ -508,4 +508,28 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sendOrder => 'Send Order';
+
+  @override
+  String get totalAmount => 'Total Amount';
+
+  @override
+  String get proceedToPayment => 'Proceed to Payment';
+
+  @override
+  String get quantity => 'Quantity';
+
+  @override
+  String get total => 'Total';
+
+  @override
+  String get cartEmpty => 'Your cart is empty';
+
+  @override
+  String get emailHint => 'example@email.com';
+
+  @override
+  String get mobileHint => '05xxxxxxxx';
+
+  @override
+  String get totalamountrequired => 'Total amount required';
 }

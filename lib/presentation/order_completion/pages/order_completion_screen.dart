@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rabwat_alriyad/core/localization/app_localizations.dart';
+import 'package:rabwat_alriyad/core/localization/localization_manager.dart';
 import 'package:rabwat_alriyad/core/theme/palette.dart';
 import 'package:rabwat_alriyad/core/widgets/app_bars/custom_app_bar.dart';
 import 'package:rabwat_alriyad/core/widgets/fields/custom_input.dart';
@@ -121,7 +122,23 @@ class _OrderCompletionScreenState extends State<OrderCompletionScreen> {
                   ),
                 ),
               ),
-              30.verticalSpace,
+              15.verticalSpace,
+              Center(
+                  child: Column(
+                children: [
+                  CustomText.s22(
+                    '7,150 ${lz.sar}',
+                    bold: true,
+                    color: Palette.dayBreakBlue.color7,
+                  ),
+                  10.verticalSpace,
+                  CustomText.s13(
+                    lz.totalamountrequired,
+                    color: Palette.neutral.color6,
+                  )
+                ],
+              )),
+              15.verticalSpace,
               // Full Name Field
               CustomInput(
                 controller: _nameController,

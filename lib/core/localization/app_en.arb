@@ -208,5 +208,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "totalAmount": "Total Amount",
+  "proceedToPayment": "Proceed to Payment",
+  "quantity": "Quantity",
+  "total": "Total",
+  "cartEmpty": "Your cart is empty",
+  "emailHint": "example@email.com",
+  "mobileHint": "05xxxxxxxx",
+  "totalamountrequired":"Total amount required"
 }

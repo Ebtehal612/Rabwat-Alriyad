@@ -973,6 +973,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Send Order'**
   String get sendOrder;
+
+  /// No description provided for @totalAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Amount'**
+  String get totalAmount;
+
+  /// No description provided for @proceedToPayment.
+  ///
+  /// In en, this message translates to:
+  /// **'Proceed to Payment'**
+  String get proceedToPayment;
+
+  /// No description provided for @quantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Quantity'**
+  String get quantity;
+
+  /// No description provided for @total.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get total;
+
+  /// No description provided for @cartEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Your cart is empty'**
+  String get cartEmpty;
+
+  /// No description provided for @emailHint.
+  ///
+  /// In en, this message translates to:
+  /// **'example@email.com'**
+  String get emailHint;
+
+  /// No description provided for @mobileHint.
+  ///
+  /// In en, this message translates to:
+  /// **'05xxxxxxxx'**
+  String get mobileHint;
+
+  /// No description provided for @totalamountrequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Total amount required'**
+  String get totalamountrequired;
 }
 
 class _AppLocalizationsDelegate

@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_libphonenumber/flutter_libphonenumber.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rabwat_alriyad/app/di/injection_container.dart';
+import 'package:rabwat_alriyad/core/localization/localization_manager.dart';
 import 'package:rabwat_alriyad/core/utils/validators.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../../../core/localization/localization_manager.dart';
+import '../../../../core/localization/app_localizations.dart';
 import '../../../../core/theme/palette.dart';
 import '../../../../core/widgets/buttons/custom_button.dart';
 import '../../../../core/widgets/fields/custom_input.dart';
@@ -17,6 +18,7 @@ class ContactUsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final lz = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: const Color(0xffF9F9F9),
       appBar: AppBar(
@@ -415,7 +417,7 @@ class ContactUsScreen extends StatelessWidget {
               SizedBox(height: 20.h),
               CustomInput(
                 title: lz.mobileNumber,
-                hint: '05xxxxxxxx',
+                hint: lz.mobileHint,
                 hintColor: Palette.neutral.color7,
                 controller: TextEditingController(),
                 backgroundColor: const Color(0xffF9F9F9),
@@ -433,7 +435,7 @@ class ContactUsScreen extends StatelessWidget {
               SizedBox(height: 20.h),
               CustomInput(
                 title: lz.emailAddress,
-                hint: 'example@email.com',
+                hint: lz.emailHint,
                 hintColor: Palette.neutral.color7,
                 controller: TextEditingController(),
                 backgroundColor: const Color(0xffF9F9F9),
